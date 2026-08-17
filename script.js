@@ -31,36 +31,6 @@ document.querySelectorAll(".faq-item").forEach((item) => {
   });
 });
 
-// Coverage meter — animate fill + counting value when scrolled into view
-const meterFill = document.getElementById("meterFill");
-const meterValue = document.getElementById("meterValue");
-const TARGET = 96;
-
-if (meterFill && meterValue) {
-  let animated = false;
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !animated) {
-          animated = true;
-          meterFill.classList.add("filled");
-          const start = performance.now();
-          const duration = 1100;
-          function tick(now) {
-            const t = Math.min(1, (now - start) / duration);
-            const eased = 1 - Math.pow(1 - t, 3);
-            meterValue.textContent = Math.round(eased * TARGET) + "%";
-            if (t < 1) requestAnimationFrame(tick);
-          }
-          requestAnimationFrame(tick);
-        }
-      });
-    },
-    { threshold: 0.4 }
-  );
-  observer.observe(meterFill);
-}
-
 // Application form — front-end only, no backend wired up yet
 const applyForm = document.getElementById("applyForm");
 const formSuccess = document.getElementById("formSuccess");
