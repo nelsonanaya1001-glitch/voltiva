@@ -3,287 +3,890 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Voltiva | Wholesale Electrical &amp; EV Equipment Distribution</title>
-<meta name="description" content="Voltiva is the wholesale distribution network for electrical, EV charging, and power equipment — 18 regional distribution centers, live inventory, 24-hour dispatch to verified trade accounts." />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 96'%3E%3Crect width='120' height='96' fill='%23ffffff'/%3E%3Cpolygon points='8,6 62,6 45,90' fill='%231c211f'/%3E%3Cpolygon points='66,6 112,6 55,90' fill='%231c211f'/%3E%3Cpolygon points='46,22 30,48 42,48 24,86 48,52 36,52' fill='%23ffffff'/%3E%3Cpolygon points='45,27 34,48 41,48 28,80 45,53 38,53' fill='%231c211f'/%3E%3C/svg%3E" />
+<title>Voltiva | Wholesale Electrical, EV &amp; Power Equipment</title>
+<meta name="description" content="Voltiva is a wholesale distributor of electrical, EV charging, energy storage, solar, and power equipment. Six product lines, 42,000+ SKUs, 24-hour dispatch to verified trade accounts." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23241a13'/%3E%3Cpath d='M36 8L20 34h10L26 56l18-28H32L36 8z' fill='%23e5bd80'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<nav class="nav">
-  <div class="wrap">
-    <a href="#top" class="brand">
-      <svg class="brand-mark" viewBox="0 0 120 96" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <polygon points="8,6 62,6 45,90" fill="#1c211f"/>
-        <polygon points="66,6 112,6 55,90" fill="#1c211f"/>
-        <polygon points="46,22 30,48 42,48 24,86 48,52 36,52" fill="#ffffff"/>
-        <polygon points="45,27 34,48 41,48 28,80 45,53 38,53" fill="#1c211f"/>
-      </svg>
-      <span class="brand-word">Voltiva</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#top">Home</a></li>
-      <li><a href="#offer">About</a></li>
-      <li><a href="#catalog">Catalog</a></li>
-      <li><a href="#network">Network</a></li>
-      <li><a href="#apply">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <a href="#apply" class="btn btn-fill">Request Access</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M1 4h16M1 9h16M1 14h16" stroke="currentColor" stroke-width="1.6"/></svg>
-      </button>
-    </div>
-  </div>
-  <div class="mobile-drawer" id="mobileDrawer">
-    <a href="#top">Home</a>
-    <a href="#offer">About</a>
-    <a href="#catalog">Catalog</a>
-    <a href="#network">Network</a>
-    <a href="#apply">Contact</a>
-    <a href="#apply" class="btn btn-navy">Request Access</a>
-  </div>
+<!-- ══════════════ NAV ══════════════ -->
+<nav>
+  <a href="#" class="nav-logo nav-tab" data-page="home">
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="1" y="1" width="62" height="62" rx="15" fill="#241a13" stroke="#c8964e" stroke-width="1.5"/>
+      <path d="M36 9L20 35h10L26 55l18-28H32L36 9z" fill="#e5bd80"/>
+    </svg>
+    <span>
+      <span class="brand-word">Volt<span>iva</span></span>
+      <span class="brand-sub">Wholesale Supply</span>
+    </span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" class="nav-tab active-tab" data-page="home">Home</a></li>
+    <li><a href="#" class="nav-tab" data-page="products">Products</a></li>
+    <li><a href="#" class="nav-tab" data-page="about">About</a></li>
+    <li><a href="#" class="nav-tab" data-page="wholesale">Wholesale</a></li>
+    <li><a href="#" class="nav-tab" data-page="contact">Contact</a></li>
+    <li><a href="#" class="nav-cta nav-tab" data-page="catalog-form">Request Catalog</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></div>
 </nav>
 
-<main id="top">
+<div class="mobile-nav" id="mobileNav">
+  <a href="#" class="nav-tab" data-page="home">Home</a>
+  <a href="#" class="nav-tab" data-page="products">Products</a>
+  <a href="#" class="nav-tab" data-page="about">About</a>
+  <a href="#" class="nav-tab" data-page="wholesale">Wholesale</a>
+  <a href="#" class="nav-tab" data-page="contact">Contact</a>
+  <a href="#" class="nav-tab" data-page="catalog-form">Request Catalog</a>
+</div>
 
-  <!-- ================= HERO ================= -->
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-content">
-        <h1>Electrical. EV. Power.<br />All Wholesale, All in One<span>.</span></h1>
-        <p class="hero-sub">Voltiva stocks and ships electrical, EV charging, and power equipment to trade accounts nationwide — verified pricing tiers, live inventory, and a fulfillment network built for resellers and contractors.</p>
-        <div class="hero-actions">
-          <a href="#catalog" class="btn btn-fill">Browse Catalog</a>
-          <a href="#apply" class="btn btn-line">Request Wholesale Access</a>
-        </div>
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" data-page="home">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Trade Accounts Only</p>
+      <h1>Wholesale power,<br /><em>sourced by the pallet.</em></h1>
+      <p class="hero-sub">Voltiva supplies electrical, EV charging, energy storage, and solar equipment to resellers, contractors, and installers nationwide — six product lines, volume tier pricing, and dispatch within 24 hours.</p>
+      <div class="btn-row">
+        <a href="#" class="btn btn-primary nav-tab" data-page="products">Browse Products</a>
+        <a href="#" class="btn btn-outline nav-tab" data-page="catalog-form">Request a Catalog</a>
       </div>
       <div class="hero-stats">
-        <div><div class="n tabular">42,000+</div><div class="l">SKUs in Stock</div></div>
-        <div><div class="n tabular">18</div><div class="l">Distribution Centers</div></div>
-        <div><div class="n tabular">24 HR</div><div class="l">Standard Dispatch</div></div>
-        <div><div class="n tabular">96%</div><div class="l">2-Day Coverage</div></div>
+        <div><div class="n tabular">42,000+</div><div class="l">SKUs Stocked</div></div>
+        <div><div class="n tabular">6</div><div class="l">Product Lines</div></div>
+        <div><div class="n tabular">24 HR</div><div class="l">Dispatch</div></div>
+        <div><div class="n tabular">18</div><div class="l">Warehouses</div></div>
       </div>
     </div>
-  </section>
 
-  <!-- ================= WHAT WE OFFER ================= -->
-  <section class="section" id="offer">
-    <div class="wrap">
+    <div class="showcase">
+      <div class="slide active"><div class="visual v-ev"><svg viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-6 6 6 6 0 0 1-6-6V8zM12 17v5"/></svg></div></div>
+      <div class="slide"><div class="visual v-storage"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="17" height="10" rx="2.5"/><path d="M22 10.5v3M8 10l-2 4h4l-2 4"/></svg></div></div>
+      <div class="slide"><div class="visual v-industrial"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 9h18M9 21V9M15 12.5h3M15 16h3"/></svg></div></div>
+      <div class="slide"><div class="visual v-solar"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8"/></svg></div></div>
+      <div class="slide"><div class="visual v-smart"><svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5V20a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 20z"/><path d="M13 9l-3 4.5h3L12 18"/></svg></div></div>
+      <div class="slide"><div class="visual v-tools"><svg viewBox="0 0 24 24"><path d="M14.5 6.5a4.2 4.2 0 0 0 5.3 5.3l-8.6 8.6a2.2 2.2 0 0 1-3.1-3.1z"/><path d="M18.7 3.3l-2.6 2.6M20.7 5.3l-2.6 2.6"/></svg></div></div>
+      <div class="slide-overlay">
+        <div class="slide-cat" id="slideCat">EV Charging &amp; Infrastructure</div>
+        <div class="slide-meta" id="slideMeta">Level 2 &amp; DC Fast &middot; 3,400 SKUs</div>
+        <div class="slide-dots" id="slideDots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ HOME: CATEGORIES ══════════════ -->
+<section class="section" data-page="home" id="categories">
+  <div class="section-head center">
+    <p class="eyebrow">Our Product Categories</p>
+    <h2>Six lines, <em>one purchase order</em></h2>
+    <p>Every line carries current UL or ETL listing with documentation on file for permitting and inspection. Click any category to see what we stock.</p>
+  </div>
+
+  <div class="cat-grid">
+
+    <div class="cat-card" onclick="showPage('cat-ev')">
+      <div class="cat-visual visual v-ev"><svg viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-6 6 6 6 0 0 1-6-6V8zM12 17v5"/></svg></div>
+      <div class="cat-body">
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-6 6 6 6 0 0 1-6-6V8zM12 17v5"/></svg></div>
+        <h3>EV Charging &amp; Infrastructure</h3>
+        <p>Level 2 wall and pedestal units, DC fast cabinets, connectors, and networked payment modules for depots, dealerships, and commercial sites.</p>
+        <div class="cat-tags">
+          <span class="cat-tag">Level 2 AC</span><span class="cat-tag">DC Fast</span><span class="cat-tag">NACS &amp; CCS1</span><span class="cat-tag">Fleet Depot</span><span class="cat-tag">OCPP</span>
+        </div>
+        <div class="cat-more">View Line <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </div>
+
+    <div class="cat-card" onclick="showPage('cat-storage')">
+      <div class="cat-visual visual v-storage"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="17" height="10" rx="2.5"/><path d="M22 10.5v3M8 10l-2 4h4l-2 4"/></svg></div>
+      <div class="cat-body">
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="17" height="10" rx="2.5"/><path d="M22 10.5v3"/></svg></div>
+        <h3>Power Storage &amp; Batteries</h3>
+        <p>LFP battery racks, commercial UPS systems, hybrid inverter-chargers, and outdoor-rated backup enclosures from 5 kWh to utility scale.</p>
+        <div class="cat-tags">
+          <span class="cat-tag">LFP Racks</span><span class="cat-tag">Commercial UPS</span><span class="cat-tag">Hybrid Inverters</span><span class="cat-tag">BMS</span><span class="cat-tag">NEMA 3R</span>
+        </div>
+        <div class="cat-more">View Line <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </div>
+
+    <div class="cat-card" onclick="showPage('cat-industrial')">
+      <div class="cat-visual visual v-industrial"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 9h18M9 21V9M15 12.5h3M15 16h3"/></svg></div>
+      <div class="cat-body">
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>Industrial Electrical</h3>
+        <p>Breakers, panelboards, contactors, motor starters, dry-type transformers, and the wire and conduit that ties a job together.</p>
+        <div class="cat-tags">
+          <span class="cat-tag">Breakers</span><span class="cat-tag">Panelboards</span><span class="cat-tag">Transformers</span><span class="cat-tag">Busbar</span><span class="cat-tag">Wire &amp; Conduit</span>
+        </div>
+        <div class="cat-more">View Line <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </div>
+
+    <div class="cat-card" onclick="showPage('cat-solar')">
+      <div class="cat-visual visual v-solar"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8"/></svg></div>
+      <div class="cat-body">
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22"/></svg></div>
+        <h3>Renewable &amp; Solar</h3>
+        <p>String and micro inverters, mounting rail, combiner boxes, rapid shutdown, PV wire, and monitoring for residential and commercial arrays.</p>
+        <div class="cat-tags">
+          <span class="cat-tag">Inverters</span><span class="cat-tag">Racking</span><span class="cat-tag">Rapid Shutdown</span><span class="cat-tag">MC4</span><span class="cat-tag">Monitoring</span>
+        </div>
+        <div class="cat-more">View Line <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </div>
+
+    <div class="cat-card" onclick="showPage('cat-smart')">
+      <div class="cat-visual visual v-smart"><svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5V20a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 20z"/><path d="M13 9l-3 4.5h3L12 18"/></svg></div>
+      <div class="cat-body">
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5V20a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 20z"/></svg></div>
+        <h3>Smart Power &amp; Building</h3>
+        <p>Smart load centers, revenue-grade submetering, occupancy and daylight controls, surge protection, and networked lighting hardware.</p>
+        <div class="cat-tags">
+          <span class="cat-tag">Smart Panels</span><span class="cat-tag">Submetering</span><span class="cat-tag">SPD</span><span class="cat-tag">Lighting Control</span><span class="cat-tag">Sensors</span>
+        </div>
+        <div class="cat-more">View Line <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </div>
+
+    <div class="cat-card" onclick="showPage('cat-tools')">
+      <div class="cat-visual visual v-tools"><svg viewBox="0 0 24 24"><path d="M14.5 6.5a4.2 4.2 0 0 0 5.3 5.3l-8.6 8.6a2.2 2.2 0 0 1-3.1-3.1z"/><path d="M18.7 3.3l-2.6 2.6M20.7 5.3l-2.6 2.6"/></svg></div>
+      <div class="cat-body">
+        <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M14.5 6.5a4.2 4.2 0 0 0 5.3 5.3l-8.6 8.6a2.2 2.2 0 0 1-3.1-3.1z"/></svg></div>
+        <h3>Tools &amp; Line Accessories</h3>
+        <p>Crimpers, meters, insulation testers, arc-flash PPE, fish tape, benders, and torque tooling — the consumables that reorder every month.</p>
+        <div class="cat-tags">
+          <span class="cat-tag">Crimpers</span><span class="cat-tag">Meters</span><span class="cat-tag">Arc-Flash PPE</span><span class="cat-tag">Benders</span><span class="cat-tag">Torque</span>
+        </div>
+        <div class="cat-more">View Line <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ HOME: ABOUT STRIP ══════════════ -->
+<section class="section alt" data-page="home">
+  <div class="split">
+    <div>
+      <p class="eyebrow">Who We Are</p>
+      <h2>A distributor that <em>speaks the trade</em></h2>
+      <p>Voltiva was built by people who spent years on the buying side of electrical supply — waiting on backorders, chasing spec sheets, and paying list price on reorders. We started the company to fix that.</p>
+      <p>We hold real inventory in eighteen regional warehouses, publish honest tier pricing, and give every account a rep who knows the difference between a 60A and an 80A feed without looking it up.</p>
+      <ul class="check-list">
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span><b>Real stock, not drop-ship listings</b> — if the site says it ships today, it is on a shelf.</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span><b>Tier pricing that steps down</b> automatically as your volume grows.</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span><b>Documentation on file</b> — UL/ETL listings and cut sheets for every SKU.</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span><b>One rep, one number</b> — no ticket queue, no call center.</span></li>
+      </ul>
+      <div class="btn-row" style="margin-top:2rem">
+        <a href="#" class="btn btn-primary nav-tab" data-page="about">More About Voltiva</a>
+      </div>
+    </div>
+    <div class="split-visual visual v-industrial">
+      <svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4Z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ HOME: WHY / TILES ══════════════ -->
+<section class="section" data-page="home">
+  <div class="section-head center">
+    <p class="eyebrow">Why Buyers Stay</p>
+    <h2>Built for reliable fulfillment</h2>
+    <p>Getting the right equipment to the right dock, verified and on schedule — from five regions and eighteen distribution centers.</p>
+  </div>
+  <div class="tile-grid">
+    <div class="tile">
+      <div class="tile-icon"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg></div>
+      <h3>24-Hour Dispatch</h3>
+      <p>Orders placed before 3pm local route to the nearest warehouse and leave the dock the next business day. 96% of the continental US is inside two-day ground.</p>
+    </div>
+    <div class="tile">
+      <div class="tile-icon"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h3>Certified &amp; Documented</h3>
+      <p>Every line carries current UL or ETL listing. Spec sheets, cut sheets, and listing documentation are attached to each SKU for permitting and inspection.</p>
+    </div>
+    <div class="tile">
+      <div class="tile-icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div>
+      <h3>Volume Tier Pricing</h3>
+      <p>Price breaks are published, not negotiated case by case. Your tier updates automatically as trailing volume grows — no renegotiation each quarter.</p>
+    </div>
+    <div class="tile">
+      <div class="tile-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg></div>
+      <h3>A Named Account Rep</h3>
+      <p>One person who knows your business, your reorder cycle, and your code requirements. Direct line and direct email — not a shared inbox.</p>
+    </div>
+    <div class="tile">
+      <div class="tile-icon"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/></svg></div>
+      <h3>5-Day RMA Resolution</h3>
+      <p>Defective or incorrect stock is resolved within five business days, no restocking fee. Open the RMA from your dashboard and we handle the freight.</p>
+    </div>
+    <div class="tile">
+      <div class="tile-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v16"/></svg></div>
+      <h3>Integrations That Work</h3>
+      <p>Direct connectors for Shopify, WooCommerce, and NetSuite, plus a flat-file feed. Approved accounts can drop-ship straight to their end customer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ HOME: FAQ ══════════════ -->
+<section class="section alt" data-page="home">
+  <div class="section-head center">
+    <p class="eyebrow">FAQ</p>
+    <h2>Common questions</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item" data-open="false">
+      <button class="faq-q" type="button"><span>How do I open a wholesale account?</span><span class="icon">+</span></button>
+      <div class="faq-a"><p>Submit a resale certificate and business license with the catalog request form. Verification and account activation typically take 24 to 48 hours, and there is no cost to apply.</p></div>
+    </div>
+    <div class="faq-item" data-open="false">
+      <button class="faq-q" type="button"><span>What are your minimum order quantities?</span><span class="icon">+</span></button>
+      <div class="faq-a"><p>MOQs are set per product line, most starting between 10 and 50 units. Tools and accessories start lower; DC fast charging and transformers are quoted per unit. Volume tiers apply automatically as order size grows.</p></div>
+    </div>
+    <div class="faq-item" data-open="false">
+      <button class="faq-q" type="button"><span>Is everything UL or ETL listed?</span><span class="icon">+</span></button>
+      <div class="faq-a"><p>Yes. Every line in the catalog carries current UL or ETL listing, with documentation available on request for permitting and inspection.</p></div>
+    </div>
+    <div class="faq-item" data-open="false">
+      <button class="faq-q" type="button"><span>Do you support drop-shipping to end customers?</span><span class="icon">+</span></button>
+      <div class="faq-a"><p>Yes, for approved accounts, with blind packing slips and direct integrations for Shopify, WooCommerce, and NetSuite.</p></div>
+    </div>
+    <div class="faq-item" data-open="false">
+      <button class="faq-q" type="button"><span>How fast do orders ship?</span><span class="icon">+</span></button>
+      <div class="faq-a"><p>Standard orders dispatch within 24 hours from the nearest regional warehouse. Roughly 96% of the continental United States is covered by two-day ground from our network.</p></div>
+    </div>
+    <div class="faq-item" data-open="false">
+      <button class="faq-q" type="button"><span>What if something arrives damaged or wrong?</span><span class="icon">+</span></button>
+      <div class="faq-a"><p>Open an RMA from your account dashboard. Defective or incorrect stock is resolved within five business days with no restocking fee, and we cover return freight on our error.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACT (home + contact tab) ══════════════ -->
+<section class="section" data-page="contact" id="contact">
+  <div class="section-head center">
+    <p class="eyebrow">Get In Touch</p>
+    <h2>Let's talk <em>volume</em></h2>
+    <p>Tell us what you're sourcing and we'll come back with pricing, availability, and lead times — usually within one business day.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3>Wholesale Desk</h3>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 6l8 6 8-6"/></svg>
+        <div><div class="k">Email</div><div class="v"><a href="mailto:wholesale@voltiva.com">wholesale@voltiva.com</a></div></div>
+      </div>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+        <div><div class="k">Phone</div><div class="v"><a href="tel:+17045550118">(704) 555-0118</a></div></div>
+      </div>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><div class="k">Distribution HQ</div><div class="v">Charlotte, North Carolina</div></div>
+      </div>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div><div class="k">Desk Hours</div><div class="v">Mon–Fri, 7am–6pm ET</div></div>
+      </div>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4Z"/><path d="M3 7v10l9 4 9-4V7"/></svg>
+        <div><div class="k">Account Type</div><div class="v">Trade only — resale certificate required</div></div>
+      </div>
+    </div>
+
+    <form id="contactForm" onsubmit="submitContact(event)">
+      <div class="form-row">
+        <div class="field"><label for="c-name">Your Name</label><input type="text" id="c-name" placeholder="Jordan Reyes" required></div>
+        <div class="field"><label for="c-company">Company</label><input type="text" id="c-company" placeholder="Reyes Electric Supply"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="c-email">Work Email</label><input type="email" id="c-email" placeholder="you@company.com" required></div>
+        <div class="field"><label for="c-phone">Phone</label><input type="tel" id="c-phone" placeholder="(704) 555-0100"></div>
+      </div>
+      <div class="field">
+        <label for="c-message">What are you sourcing?</label>
+        <textarea id="c-message" rows="6" placeholder="Tell us what you need — product lines, approximate quantities, target timeline, and anything specific about brands, amperage, or certifications."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+      <span class="form-note">Voltiva sells to businesses only. A resale certificate or contractor license is required before an account is activated.</span>
+      <div class="form-success" id="contactSuccess">✓ Thanks — your message is ready to send from your email client.</div>
+    </form>
+  </div>
+</section>
+
+<!-- ══════════════ PAGE: PRODUCTS ══════════════ -->
+<section data-page="products">
+  <div class="page-hero">
+    <h1>Our <em>Product Lines</em></h1>
+    <p>Six wholesale lines covering everything from a single crimper to a 350 kW fast-charging cabinet. Choose a line to see what we stock.</p>
+  </div>
+  <div class="page-body">
+    <div class="cat-grid">
+
+      <div class="cat-card visible" onclick="showPage('cat-ev')">
+        <div class="cat-visual visual v-ev"><svg viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-6 6 6 6 0 0 1-6-6V8zM12 17v5"/></svg></div>
+        <div class="cat-body">
+          <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-6 6 6 6 0 0 1-6-6V8zM12 17v5"/></svg></div>
+          <h3>EV Charging &amp; Infrastructure</h3>
+          <p>Level 2 wall and pedestal units, DC fast cabinets, connectors, and networked payment modules. <b style="color:var(--tan-lt)">~3,400 SKUs.</b></p>
+          <div class="cat-more">View Line <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </div>
+
+      <div class="cat-card visible" onclick="showPage('cat-storage')">
+        <div class="cat-visual visual v-storage"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="17" height="10" rx="2.5"/><path d="M22 10.5v3M8 10l-2 4h4l-2 4"/></svg></div>
+        <div class="cat-body">
+          <div class="cat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="17" height="10" rx="2.5"/><path d="M22 10.5v3"/></svg></div>
+          <h3>Power Storage &amp; Batteries</h3>
+          <p>LFP racks, commercial UPS, hybrid inverter-chargers, and outdoor backup enclosures. <b style="color:var(--tan-lt)">~2,100 SKUs.</b></p>
+          <div class="cat-more">View Line <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </div>
+
+      <div class="cat-card visible" onclick="showPage('cat-industrial')">
+        <div class="cat-visual visual v-industrial"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 9h18M9 21V9M15 12.5h3M15 16h3"/></svg></div>
+        <div class="cat-body">
+          <div class="cat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <h3>Industrial Electrical</h3>
+          <p>Breakers, panelboards, contactors, transformers, busbar, wire and conduit. <b style="color:var(--tan-lt)">~18,600 SKUs.</b></p>
+          <div class="cat-more">View Line <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </div>
+
+      <div class="cat-card visible" onclick="showPage('cat-solar')">
+        <div class="cat-visual visual v-solar"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8"/></svg></div>
+        <div class="cat-body">
+          <div class="cat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22"/></svg></div>
+          <h3>Renewable &amp; Solar</h3>
+          <p>Inverters, racking, combiner boxes, rapid shutdown, PV wire, and monitoring. <b style="color:var(--tan-lt)">~6,800 SKUs.</b></p>
+          <div class="cat-more">View Line <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </div>
+
+      <div class="cat-card visible" onclick="showPage('cat-smart')">
+        <div class="cat-visual visual v-smart"><svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5V20a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 20z"/><path d="M13 9l-3 4.5h3L12 18"/></svg></div>
+        <div class="cat-body">
+          <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5V20a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 20z"/></svg></div>
+          <h3>Smart Power &amp; Building</h3>
+          <p>Smart load centers, submetering, lighting control, sensors, and surge protection. <b style="color:var(--tan-lt)">~5,300 SKUs.</b></p>
+          <div class="cat-more">View Line <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </div>
+
+      <div class="cat-card visible" onclick="showPage('cat-tools')">
+        <div class="cat-visual visual v-tools"><svg viewBox="0 0 24 24"><path d="M14.5 6.5a4.2 4.2 0 0 0 5.3 5.3l-8.6 8.6a2.2 2.2 0 0 1-3.1-3.1z"/><path d="M18.7 3.3l-2.6 2.6M20.7 5.3l-2.6 2.6"/></svg></div>
+        <div class="cat-body">
+          <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M14.5 6.5a4.2 4.2 0 0 0 5.3 5.3l-8.6 8.6a2.2 2.2 0 0 1-3.1-3.1z"/></svg></div>
+          <h3>Tools &amp; Line Accessories</h3>
+          <p>Crimpers, meters, testers, arc-flash PPE, benders, and torque tooling. <b style="color:var(--tan-lt)">~5,800 SKUs.</b></p>
+          <div class="cat-more">View Line <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cta-box">
+      <h3>Not sure which line you need?</h3>
+      <p>Send us a parts list, a bid sheet, or even a photo of a nameplate. We'll match it to stock and quote it back.</p>
+      <div class="btn-row">
+        <a href="#" class="btn btn-primary nav-tab" data-page="catalog-form">Request a Catalog</a>
+        <a href="#" class="btn btn-outline nav-tab" data-page="contact">Talk to a Rep</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PAGE: ABOUT ══════════════ -->
+<section data-page="about">
+  <div class="page-hero">
+    <h1>About <em>Voltiva</em></h1>
+    <p>A wholesale electrical and power equipment distributor built by former buyers, for the people still doing the buying.</p>
+  </div>
+  <div class="page-body">
+
+    <div class="stats-bar">
+      <div class="stat-item"><h3 class="tabular">6</h3><p>Product Lines</p></div>
+      <div class="stat-item"><h3 class="tabular">1,900+</h3><p>Trade Accounts</p></div>
+      <div class="stat-item"><h3 class="tabular">99.4%</h3><p>Order Accuracy</p></div>
+      <div class="stat-item"><h3>NC</h3><p>HQ in Charlotte</p></div>
+    </div>
+
+    <div class="split" style="margin-top:4.5rem">
+      <div>
+        <p class="eyebrow">Our Story</p>
+        <h2>We got tired of <em>chasing our own orders</em></h2>
+        <p>Voltiva started in a Charlotte warehouse in 2019, founded by three people who had spent a combined twenty years buying electrical gear for contractors and resellers. They knew exactly what was broken: phantom inventory, list pricing on reorders, and spec sheets that took a week to arrive.</p>
+        <p>So they built the opposite. Voltiva only lists what is physically on a shelf. Pricing tiers are published up front. Documentation is attached to the SKU, not emailed on request. And every account gets a named rep instead of a ticket number.</p>
+        <p>Seven years later we run eighteen warehouses across five regions and serve more than nineteen hundred trade accounts — but the rule has not changed. If it says it ships today, it ships today.</p>
+      </div>
+      <div class="split-visual visual v-solar">
+        <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V11l7-6 7 6v10"/><path d="M9 21v-5h6v5"/><path d="M13 7.5l-2.5 3.5H13l-1 3"/></svg>
+      </div>
+    </div>
+
+    <div style="margin-top:5rem">
       <div class="section-head center">
-        <p class="eyebrow">What We Offer</p>
-        <h2>One account, everything a trade buyer needs</h2>
-        <p>Voltiva is built for resellers, contractors, and installers — not consumer checkout.</p>
+        <p class="eyebrow">What We Stand For</p>
+        <h2>Four rules we don't bend</h2>
       </div>
-
-      <div class="offer-grid">
-        <div class="offer-card">
-          <div class="offer-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 7l9-4 9 4-9 4-9-4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M3 7v10l9 4 9-4V7" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 11v10" stroke="currentColor" stroke-width="1.7"/></svg>
-          </div>
-          <h3>Wholesale Catalog</h3>
-          <p>Six verified product lines — from EV chargers to industrial breakers — priced in volume tiers that step down automatically as you order more.</p>
-          <span class="tag">6 catalog lines</span>
+      <div class="tile-grid">
+        <div class="tile">
+          <div class="tile-icon"><svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4Z"/><path d="M3 7v10l9 4 9-4V7"/></svg></div>
+          <h3>Only Real Inventory</h3>
+          <p>We never list stock we don't hold. No phantom availability, no "ships in 6–8 weeks" surprises after you've already sold it to your customer.</p>
         </div>
-        <div class="offer-card">
-          <div class="offer-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 7h11v9H3z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 10h4l3 3v3h-7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7" cy="18" r="1.8" stroke="currentColor" stroke-width="1.7"/><circle cx="17.5" cy="18" r="1.8" stroke="currentColor" stroke-width="1.7"/></svg>
-          </div>
-          <h3>Trade Fulfillment</h3>
-          <p>Every order routes to the nearest of 18 regional distribution centers, picked, packed, and quality-checked within 24 hours of purchase.</p>
-          <span class="tag">18 regional DCs</span>
+        <div class="tile">
+          <div class="tile-icon"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <h3>Published Pricing</h3>
+          <p>Your tier is visible in your account and steps down on trailing volume. No quarterly renegotiation, no penalty for being a smaller shop.</p>
         </div>
-        <div class="offer-card">
-          <div class="offer-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.7"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Account Support</h3>
-          <p>A dedicated rep who knows gauge, voltage, and code requirements — not just SKUs — helps you source, reorder, and stay compliant.</p>
-          <span class="tag">Dedicated rep, every account</span>
+        <div class="tile">
+          <div class="tile-icon"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Code-Ready Paperwork</h3>
+          <p>UL and ETL listings, cut sheets, and installation docs live on the SKU page. Your inspector gets what they need without a phone call to us.</p>
+        </div>
+        <div class="tile">
+          <div class="tile-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg></div>
+          <h3>People, Not Portals</h3>
+          <p>Every account has a rep with a direct line who knows your reorder cycle. Software is there to help them, not replace them.</p>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ================= CATALOG / CATEGORIES ================= -->
-  <section class="section soft" id="catalog">
-    <div class="wrap">
+    <div class="cta-box">
+      <h3>Ready to open an account?</h3>
+      <p>Verification takes 24 to 48 hours. There's no cost to apply and no obligation to order.</p>
+      <div class="btn-row">
+        <a href="#" class="btn btn-primary nav-tab" data-page="catalog-form">Request Wholesale Access</a>
+        <a href="#" class="btn btn-outline nav-tab" data-page="products">Browse Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PAGE: WHOLESALE ══════════════ -->
+<section data-page="wholesale">
+  <div class="page-hero">
+    <h1>Wholesale <em>Program</em></h1>
+    <p>From a 10-unit reorder to a full container load — tiered pricing, dedicated support, and freight that lands when you need it.</p>
+  </div>
+  <div class="page-body">
+
+    <div class="split">
+      <div>
+        <p class="eyebrow">Order Sizing</p>
+        <h2>From 10 units to <em>full container loads</em></h2>
+        <p>Most lines start at a 10 to 50 unit minimum. Tools and accessories go lower; DC fast charging, transformers, and utility-scale storage are quoted per unit with project pricing.</p>
+        <p>Four published tiers move on trailing 90-day volume. You don't apply for a tier and you don't renegotiate one — the account moves when the volume does, and the new pricing applies to the next order automatically.</p>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span><b>Tier 1 —</b> under $5,000 / mo &middot; standard wholesale</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span><b>Tier 2 —</b> $5,000–$25,000 / mo &middot; 4–7% below standard</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span><b>Tier 3 —</b> $25,000–$100,000 / mo &middot; 8–13% below, freight allowances</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span><b>Tier 4 —</b> $100,000+ / mo &middot; project pricing, dedicated stock allocation</span></li>
+        </ul>
+      </div>
+      <div class="split-visual visual v-storage">
+        <svg viewBox="0 0 24 24"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18.5" r="1.9"/><circle cx="17.5" cy="18.5" r="1.9"/></svg>
+      </div>
+    </div>
+
+    <div style="margin-top:5rem">
       <div class="section-head center">
-        <p class="eyebrow">Catalog Lines</p>
-        <h2>Six lines, one purchase order</h2>
-        <p>Every line carries current UL or ETL listing, with documentation on file for permitting and inspection.</p>
+        <p class="eyebrow">How It Works</p>
+        <h2>Four steps to your first shipment</h2>
       </div>
-
-      <div class="category-grid">
-        <div class="category-item"><span class="dot"></span><span><span class="name">EV Charging &amp; Infrastructure</span><span class="sub">Level 2 chargers, connectors, cabinets</span></span></div>
-        <div class="category-item"><span class="dot"></span><span><span class="name">Power Storage &amp; Batteries</span><span class="sub">Lithium racks, UPS, monitoring</span></span></div>
-        <div class="category-item"><span class="dot"></span><span><span class="name">Industrial Electrical</span><span class="sub">Breakers, contactors, busbar</span></span></div>
-        <div class="category-item"><span class="dot"></span><span><span class="name">Renewable &amp; Solar</span><span class="sub">Inverters, rail, combiner boxes</span></span></div>
-        <div class="category-item"><span class="dot"></span><span><span class="name">Smart Power &amp; Home</span><span class="sub">Load centers, metering, outlets</span></span></div>
-        <div class="category-item"><span class="dot"></span><span><span class="name">Tools &amp; Line Accessories</span><span class="sub">Crimpers, testers, PPE</span></span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= COMMITMENT / STATS ================= -->
-  <section class="commitment" id="network">
-    <div class="wrap">
-      <p class="eyebrow">Our Commitment</p>
-      <h2>Built for Reliable Fulfillment<br /><em>One Shipment at a Time</em></h2>
-      <p class="lead">We're committed to getting the right electrical and EV equipment to the right dock — verified, in stock, and on schedule, from five regions and 18 distribution centers.</p>
-      <div class="commitment-stats">
-        <div><div class="n tabular">1,900+</div><div class="l">Trade Accounts</div></div>
-        <div><div class="n tabular">99.4%</div><div class="l">Order Accuracy</div></div>
-        <div><div class="n tabular">5</div><div class="l">Regions Served</div></div>
-        <div><div class="n tabular">5-Day</div><div class="l">RMA Resolution</div></div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-n">01</div>
+          <h3>Apply</h3>
+          <p>Send the catalog request form with your resale certificate or contractor license. Takes about five minutes.</p>
+        </div>
+        <div class="step">
+          <div class="step-n">02</div>
+          <h3>Get Verified</h3>
+          <p>We confirm the business and activate the account, usually within 24 to 48 hours. A named rep is assigned at this point.</p>
+        </div>
+        <div class="step">
+          <div class="step-n">03</div>
+          <h3>Quote &amp; Order</h3>
+          <p>Your rep prices the list against live stock, confirms lead times, and sends a quote you can convert straight to a PO.</p>
+        </div>
+        <div class="step">
+          <div class="step-n">04</div>
+          <h3>Ship &amp; Reorder</h3>
+          <p>Order routes to the nearest warehouse and dispatches in 24 hours. Reorders take one click from your history.</p>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- ================= FAQ ================= -->
-  <section class="section" id="faq">
-    <div class="wrap">
+    <div style="margin-top:5rem">
       <div class="section-head center">
-        <p class="eyebrow">FAQ</p>
-        <h2>Common questions</h2>
+        <p class="eyebrow">Program Benefits</p>
+        <h2>What comes with the account</h2>
       </div>
+      <div class="tile-grid">
+        <div class="tile">
+          <div class="tile-icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div>
+          <h3>Automatic Tier Movement</h3>
+          <p>Trailing 90-day volume sets your price break. It moves up on its own — no application, no quarterly review meeting.</p>
+        </div>
+        <div class="tile">
+          <div class="tile-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M7 14h5"/></svg></div>
+          <h3>Net 30 Terms</h3>
+          <p>Available after three completed orders and a standard credit check. Net 60 on Tier 3 and above.</p>
+        </div>
+        <div class="tile">
+          <div class="tile-icon"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg></div>
+          <h3>Freight Allowances</h3>
+          <p>Free ground freight on qualifying orders at Tier 3 and above, plus consolidated LTL scheduling for multi-line orders.</p>
+        </div>
+        <div class="tile">
+          <div class="tile-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v16"/></svg></div>
+          <h3>Drop-Ship &amp; Integrations</h3>
+          <p>Blind drop-ship to your end customer with your packing slip, plus connectors for Shopify, WooCommerce, and NetSuite.</p>
+        </div>
+        <div class="tile">
+          <div class="tile-icon"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/></svg></div>
+          <h3>Stock Allocation</h3>
+          <p>Tier 4 accounts can reserve dedicated stock against a forecast so a big install doesn't get outbid by another buyer.</p>
+        </div>
+        <div class="tile">
+          <div class="tile-icon"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/></svg></div>
+          <h3>5-Day RMA, No Restock Fee</h3>
+          <p>Defective or mis-picked stock is resolved within five business days. On our error, we cover return freight both ways.</p>
+        </div>
+      </div>
+    </div>
 
-      <div class="faq-list" id="faqList">
-        <div class="faq-item" data-open="false">
-          <button class="faq-q"><span class="txt">How do I open a wholesale account?</span><span class="icon">+</span></button>
-          <div class="faq-a"><p>Submit a resale certificate and business license through the application below. Verification and account activation typically take 24–48 hours.</p></div>
+    <div style="margin-top:5rem">
+      <div class="section-head center">
+        <p class="eyebrow">Who We Work With</p>
+        <h2>Built for four kinds of buyer</h2>
+      </div>
+      <div class="tile-grid">
+        <div class="tile">
+          <div class="tile-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg></div>
+          <h3>Electrical Contractors</h3>
+          <p>Job-lot pricing, will-call at eighteen warehouses, and code documentation your inspector will actually accept.</p>
         </div>
-        <div class="faq-item" data-open="false">
-          <button class="faq-q"><span class="txt">What are your minimum order quantities?</span><span class="icon">+</span></button>
-          <div class="faq-a"><p>MOQs are set per catalog line, most starting between 10 and 50 units. Volume pricing tiers apply automatically as order size grows.</p></div>
+        <div class="tile">
+          <div class="tile-icon"><svg viewBox="0 0 24 24"><path d="M6 2h12l2 5H4z"/><path d="M5 7v13a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7"/><path d="M9 11h6"/></svg></div>
+          <h3>Resellers &amp; Retailers</h3>
+          <p>Product feeds, blind drop-ship, and MAP-protected lines so your storefront isn't undercut by your own supplier.</p>
         </div>
-        <div class="faq-item" data-open="false">
-          <button class="faq-q"><span class="txt">Are your products UL or ETL listed?</span><span class="icon">+</span></button>
-          <div class="faq-a"><p>Yes. Every line in the catalog carries current UL or ETL listing, with documentation available on request for permitting and inspection.</p></div>
+        <div class="tile">
+          <div class="tile-icon"><svg viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-12 0V8zM12 17v5"/></svg></div>
+          <h3>EV Installers</h3>
+          <p>Charger, connector, and load-management stock in one PO, with utility-rebate paperwork bundled per SKU.</p>
         </div>
-        <div class="faq-item" data-open="false">
-          <button class="faq-q"><span class="txt">Do you support drop-shipping to end customers?</span><span class="icon">+</span></button>
-          <div class="faq-a"><p>Yes, for approved accounts, with direct integrations for Shopify, WooCommerce, and NetSuite.</p></div>
-        </div>
-        <div class="faq-item" data-open="false">
-          <button class="faq-q"><span class="txt">How fast do orders ship?</span><span class="icon">+</span></button>
-          <div class="faq-a"><p>Standard orders dispatch within 24 hours from the nearest regional distribution center. 96% of the continental U.S. is covered by 2-day ground.</p></div>
-        </div>
-        <div class="faq-item" data-open="false">
-          <button class="faq-q"><span class="txt">What happens if something arrives damaged or wrong?</span><span class="icon">+</span></button>
-          <div class="faq-a"><p>Open an RMA from your account dashboard. Defective or incorrect stock is resolved within 5 business days, with no restocking fee.</p></div>
+        <div class="tile">
+          <div class="tile-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <h3>Facility &amp; Property Teams</h3>
+          <p>Standing reorder lists for maintenance stock, submetering rollouts, and multi-site freight consolidated to one dock.</p>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ================= CTA / APPLICATION ================= -->
-  <section class="cta-section" id="apply">
-    <div class="wrap section">
-      <div class="cta-grid">
-        <div class="cta-copy">
-          <p class="eyebrow">Get Started</p>
-          <h2>Request wholesale access</h2>
-          <p>Tell us about the business and we'll verify the account within 24–48 hours. No cost to apply, no obligation to order.</p>
-          <ul>
-            <li><b>Response time —</b> within 1 business day</li>
-            <li><b>Requires —</b> resale certificate or business license</li>
-            <li><b>Cost to apply —</b> none</li>
-          </ul>
-        </div>
-
-        <form class="app-form" id="applyForm">
-          <div class="form-row">
-            <div class="field">
-              <label for="company">Company Name</label>
-              <input type="text" id="company" name="company" required />
-            </div>
-            <div class="field">
-              <label for="contact">Contact Name</label>
-              <input type="text" id="contact" name="contact" required />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="field">
-              <label for="email">Work Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="field">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" />
-            </div>
-          </div>
-          <div class="field">
-            <label for="volume">Estimated Monthly Volume</label>
-            <select id="volume" name="volume">
-              <option>Under $5,000</option>
-              <option>$5,000 – $25,000</option>
-              <option>$25,000 – $100,000</option>
-              <option>$100,000+</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="message">Catalog Lines of Interest</label>
-            <textarea id="message" name="message" placeholder="e.g. EV charging, industrial components..."></textarea>
-          </div>
-          <div class="form-foot">
-            <button type="submit" class="btn btn-navy">Submit Application</button>
-            <span class="form-success" id="formSuccess">✓ Application received — check your email</span>
-            <span class="form-note">By submitting, you confirm this is a business inquiry for wholesale purchasing.</span>
-          </div>
-        </form>
+    <div class="cta-box">
+      <h3>Ready to place a wholesale order?</h3>
+      <p>Send us your list and we'll come back with pricing, availability, and MOQ details within one business day.</p>
+      <div class="btn-row">
+        <a href="#" class="btn btn-primary nav-tab" data-page="catalog-form">Request a Quote</a>
+        <a href="#" class="btn btn-outline nav-tab" data-page="contact">Talk to a Rep</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-</main>
+<!-- ══════════════ PAGE: EV CHARGING ══════════════ -->
+<section data-page="cat-ev">
+  <div class="page-hero">
+    <h1>EV Charging &amp; <em>Infrastructure</em></h1>
+    <p>Level 2 and DC fast charging hardware, connectors, and network modules for depots, dealerships, multifamily, and commercial sites — stocked in pallet quantities.</p>
+  </div>
+  <div class="page-body">
+    <a href="#" class="back-link" onclick="showPage('products'); return false;"><svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg> All Product Lines</a>
+    <div class="cat-banner visual v-ev"><svg viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-6 6 6 6 0 0 1-6-6V8zM12 17v5"/></svg></div>
+    <div class="sub-grid">
+      <div class="sub-card"><div class="sub-visual visual v-ev"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="16" rx="2"/><path d="M13 6l-3 5h3l-1 5M9 22h6"/></svg></div><div class="sub-body"><h4>Level 2 AC Chargers</h4><p>Hardwired and plug-in wall units from 32A to 80A, in both J1772 and NACS, with and without onboard load management.</p><div class="sub-spec">32A–80A · MOQ 10</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-ev"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 7l-2.5 4H12l-1 5"/><path d="M3 17h18"/></svg></div><div class="sub-body"><h4>DC Fast Charging Cabinets</h4><p>60 kW through 350 kW cabinets and dispensers, liquid-cooled and air-cooled, single and dual outlet. Quoted per unit with project pricing.</p><div class="sub-spec">60–350 kW · Per-unit quote</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-ev"><svg viewBox="0 0 24 24"><path d="M4 5v6a4 4 0 0 0 4 4h8a4 4 0 0 1 4 4v2"/><circle cx="4" cy="4" r="2"/><circle cx="20" cy="20" r="2"/></svg></div><div class="sub-body"><h4>Connectors &amp; Cable Assemblies</h4><p>J1772, CCS1, and NACS connectors, tethered cable assemblies in 16 to 25 ft, holsters, and replacement cable kits.</p><div class="sub-spec">16–25 ft · MOQ 25</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-ev"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="6" height="12" rx="1"/><rect x="9" y="6" width="6" height="12" rx="1"/><rect x="16" y="6" width="6" height="12" rx="1"/><path d="M12 2v3"/></svg></div><div class="sub-body"><h4>Fleet &amp; Depot Charging</h4><p>Multi-port load-managed systems for fleet yards, with power-sharing controllers that let one service feed twelve or more vehicles overnight.</p><div class="sub-spec">4–24 port · Project quote</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-ev"><svg viewBox="0 0 24 24"><path d="M12 3v18M8 21h8"/><rect x="8" y="4" width="8" height="9" rx="1.5"/></svg></div><div class="sub-body"><h4>Pedestals, Bollards &amp; Mounts</h4><p>Single and dual-port pedestals, protective bollards, wall brackets, and cable management arms in galvanized and powder-coat finishes.</p><div class="sub-spec">Galv. &amp; powder-coat · MOQ 10</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-ev"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/><circle cx="17" cy="15" r="1.5"/></svg></div><div class="sub-body"><h4>Payment &amp; Network Modules</h4><p>OCPP 1.6 and 2.0.1 controllers, RFID readers, contactless payment terminals, and cellular gateways for public-site billing.</p><div class="sub-spec">OCPP 1.6 / 2.0.1 · MOQ 10</div></div></div>
+    </div>
+    <div class="cta-box">
+      <h3>Looking for EV charging stock?</h3>
+      <p>Send your site count and power budget — we'll come back with pricing, availability, and rebate paperwork within 24 hours.</p>
+      <div class="btn-row"><a href="#" class="btn btn-primary nav-tab" data-page="catalog-form">Request a Quote</a><a href="#" class="btn btn-outline" onclick="showPage('products'); return false;">All Product Lines</a></div>
+    </div>
+  </div>
+</section>
 
+<!-- ══════════════ PAGE: POWER STORAGE ══════════════ -->
+<section data-page="cat-storage">
+  <div class="page-hero">
+    <h1>Power Storage &amp; <em>Batteries</em></h1>
+    <p>Lithium racks, commercial UPS, hybrid inverter-chargers, and backup enclosures — from a 5 kWh closet install to a containerized commercial bank.</p>
+  </div>
+  <div class="page-body">
+    <a href="#" class="back-link" onclick="showPage('products'); return false;"><svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg> All Product Lines</a>
+    <div class="cat-banner visual v-storage"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="17" height="10" rx="2.5"/><path d="M22 10.5v3M8 10l-2 4h4l-2 4"/></svg></div>
+    <div class="sub-grid">
+      <div class="sub-card"><div class="sub-visual visual v-storage"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="5" rx="1"/><rect x="4" y="9.5" width="16" height="5" rx="1"/><rect x="4" y="16" width="16" height="5" rx="1"/></svg></div><div class="sub-body"><h4>LFP Battery Racks</h4><p>Lithium iron phosphate modules from 5 kWh to 30 kWh, rack-mount and wall-mount, with 6,000-cycle ratings and integrated BMS.</p><div class="sub-spec">5–30 kWh · MOQ 5</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-storage"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M13 8l-3 4.5h3L12 17"/><path d="M3 10h3M18 10h3"/></svg></div><div class="sub-body"><h4>Commercial UPS Systems</h4><p>Rack and tower units from 1 kVA to 200 kVA, line-interactive and double-conversion, with hot-swap battery modules and network cards.</p><div class="sub-spec">1–200 kVA · MOQ 5</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-storage"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M13 15l-2.5 4H13"/></svg></div><div class="sub-body"><h4>Hybrid Inverter-Chargers</h4><p>Grid-tied and off-grid hybrid inverters from 3 kW to 50 kW with PV inputs, generator start, and automatic transfer built in.</p><div class="sub-spec">3–50 kW · MOQ 5</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-storage"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 15V10M11 15V8M15 15v-4M19 15V9"/></svg></div><div class="sub-body"><h4>Battery Management &amp; Monitoring</h4><p>BMS boards, cell balancers, shunt-based monitors, and cloud gateways that report state-of-charge and cell health per string.</p><div class="sub-spec">CAN / RS485 · MOQ 20</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-storage"><svg viewBox="0 0 24 24"><path d="M4 8h16v13H4z"/><path d="M4 8l2-4h12l2 4"/><path d="M10 14h4"/></svg></div><div class="sub-body"><h4>Backup Power Enclosures</h4><p>NEMA 3R and 4X outdoor-rated cabinets with thermal management, fire suppression options, and pre-cut conduit knockouts.</p><div class="sub-spec">NEMA 3R / 4X · MOQ 5</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-storage"><svg viewBox="0 0 24 24"><rect x="2" y="8" width="20" height="9" rx="1.5"/><path d="M6 8V5.5M12 8V5.5M18 8V5.5"/></svg></div><div class="sub-body"><h4>Deep-Cycle &amp; AGM Banks</h4><p>Sealed AGM and flooded deep-cycle batteries in 6V and 12V, plus interconnect cable kits, trays, and terminal hardware.</p><div class="sub-spec">6V / 12V · MOQ 24</div></div></div>
+    </div>
+    <div class="cta-box">
+      <h3>Sizing a storage bank?</h3>
+      <p>Send your load profile and backup window — we'll spec a bank against live stock and quote it back.</p>
+      <div class="btn-row"><a href="#" class="btn btn-primary nav-tab" data-page="catalog-form">Request a Quote</a><a href="#" class="btn btn-outline" onclick="showPage('products'); return false;">All Product Lines</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PAGE: INDUSTRIAL ══════════════ -->
+<section data-page="cat-industrial">
+  <div class="page-hero">
+    <h1>Industrial <em>Electrical</em></h1>
+    <p>The distribution backbone — breakers, panelboards, contactors, transformers, busbar, and the wire and conduit that ties a job together.</p>
+  </div>
+  <div class="page-body">
+    <a href="#" class="back-link" onclick="showPage('products'); return false;"><svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg> All Product Lines</a>
+    <div class="cat-banner visual v-industrial"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 9h18M9 21V9M15 12.5h3M15 16h3"/></svg></div>
+    <div class="sub-grid">
+      <div class="sub-card"><div class="sub-visual visual v-industrial"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="1.5"/><path d="M10 8h4M10 12h4M10 16h4"/></svg></div><div class="sub-body"><h4>Breakers &amp; Panelboards</h4><p>Molded-case and miniature breakers from 15A to 1200A, plus load centers, panelboards, and switchboards in main-lug and main-breaker.</p><div class="sub-spec">15A–1200A · MOQ 20</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-industrial"><svg viewBox="0 0 24 24"><rect x="5" y="6" width="14" height="12" rx="1.5"/><path d="M9 6V3M15 6v-3M9 18v3M15 18v3"/></svg></div><div class="sub-body"><h4>Contactors &amp; Motor Starters</h4><p>IEC and NEMA contactors, overload relays, combination starters, and soft starts for motors from fractional to 500 HP.</p><div class="sub-spec">Fractional–500 HP · MOQ 10</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-industrial"><svg viewBox="0 0 24 24"><path d="M3 8h18M3 12h18M3 16h18"/><circle cx="7" cy="8" r="1.3"/><circle cx="13" cy="12" r="1.3"/><circle cx="18" cy="16" r="1.3"/></svg></div><div class="sub-body"><h4>Busbar &amp; Distribution Blocks</h4><p>Copper and aluminum busbar, power distribution blocks, terminal strips, insulators, and mounting hardware for panel builds.</p><div class="sub-spec">Cu &amp; Al · MOQ 10</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-industrial"><svg viewBox="0 0 24 24"><path d="M4 12h3M17 12h3"/><circle cx="10" cy="12" r="3"/><circle cx="14" cy="12" r="3"/><path d="M12 4v3M12 17v3"/></svg></div><div class="sub-body"><h4>Dry-Type Transformers</h4><p>Encapsulated and ventilated dry-type transformers from 15 kVA to 500 kVA, single and three phase, in standard and K-rated builds.</p><div class="sub-spec">15–500 kVA · Per-unit quote</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-industrial"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="1.5"/><path d="M19 9h2M9 8l4 3-4 3"/></svg></div><div class="sub-body"><h4>Disconnects &amp; Safety Switches</h4><p>Fusible and non-fusible safety switches from 30A to 800A in NEMA 1, 3R, and 4X, plus rotary disconnects and lockout hardware.</p><div class="sub-spec">30A–800A · MOQ 10</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-industrial"><svg viewBox="0 0 24 24"><path d="M4 6c4 0 4 12 8 12s4-12 8-12"/><circle cx="4" cy="6" r="1.6"/><circle cx="20" cy="6" r="1.6"/></svg></div><div class="sub-body"><h4>Wire, Cable &amp; Conduit</h4><p>THHN, XHHW, MC and SER cable by the reel, plus EMT, rigid, and PVC conduit with couplings, straps, and fittings.</p><div class="sub-spec">14 AWG–750 MCM · By reel</div></div></div>
+    </div>
+    <div class="cta-box">
+      <h3>Pricing a panel build?</h3>
+      <p>Send the bid sheet or bill of materials and we'll price the whole list against live stock in one quote.</p>
+      <div class="btn-row"><a href="#" class="btn btn-primary nav-tab" data-page="catalog-form">Request a Quote</a><a href="#" class="btn btn-outline" onclick="showPage('products'); return false;">All Product Lines</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PAGE: SOLAR ══════════════ -->
+<section data-page="cat-solar">
+  <div class="page-hero">
+    <h1>Renewable &amp; <em>Solar</em></h1>
+    <p>Inverters, racking, rapid shutdown, PV wire, and monitoring for residential rooftops through commercial ground-mount arrays.</p>
+  </div>
+  <div class="page-body">
+    <a href="#" class="back-link" onclick="showPage('products'); return false;"><svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg> All Product Lines</a>
+    <div class="cat-banner visual v-solar"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8"/></svg></div>
+    <div class="sub-grid">
+      <div class="sub-card"><div class="sub-visual visual v-solar"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="14" rx="1.5"/><path d="M13 8l-3 4.5h3L12 17"/><path d="M8 21h8"/></svg></div><div class="sub-body"><h4>String &amp; Micro Inverters</h4><p>Residential and commercial string inverters from 3 kW to 100 kW, plus microinverters and DC optimizers with module-level shutdown.</p><div class="sub-spec">3–100 kW · MOQ 5</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-solar"><svg viewBox="0 0 24 24"><path d="M3 18h18M6 18l3-12M18 18l-3-12M9 6h6"/><path d="M7 12h10"/></svg></div><div class="sub-body"><h4>Racking &amp; Mounting Rail</h4><p>Anodized and mill-finish rail, flashings, L-feet, mid and end clamps, and ballasted flat-roof systems in aluminum and stainless.</p><div class="sub-spec">Al &amp; SS · By pallet</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-solar"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1.5"/><path d="M8 5V3M16 5V3M8 19v2M16 19v2M9 12h6"/></svg></div><div class="sub-body"><h4>Combiner Boxes &amp; Rapid Shutdown</h4><p>String combiners from 4 to 24 inputs with integrated fusing, plus NEC 690.12 compliant rapid shutdown transmitters and initiators.</p><div class="sub-spec">NEC 690.12 · MOQ 5</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-solar"><svg viewBox="0 0 24 24"><path d="M4 8v4a4 4 0 0 0 4 4h8a4 4 0 0 1 4 4"/><circle cx="4" cy="6" r="1.8"/><circle cx="20" cy="20" r="1.8"/></svg></div><div class="sub-body"><h4>PV Wire &amp; MC4 Connectors</h4><p>UL 4703 PV wire in 10 and 12 AWG by the reel, MC4 and MC4-EVO connectors, branch connectors, and crimp tooling.</p><div class="sub-spec">10 &amp; 12 AWG · By reel</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-solar"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M7 13l3-4 2.5 2.5L17 7"/><path d="M9 21h6"/></svg></div><div class="sub-body"><h4>Solar Monitoring &amp; Metering</h4><p>Production meters, revenue-grade CTs, consumption monitors, and cellular or Ethernet gateways for portfolio-level reporting.</p><div class="sub-spec">ANSI C12.20 · MOQ 10</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-solar"><svg viewBox="0 0 24 24"><path d="M3 20h18"/><path d="M6 20V9l6-4 6 4v11"/><path d="M6 13h12"/></svg></div><div class="sub-body"><h4>Ground Mount Hardware</h4><p>Driven-pier and ballasted ground-mount structures, torque tubes, purlins, and foundation hardware for arrays up to several megawatts.</p><div class="sub-spec">Project quote</div></div></div>
+    </div>
+    <div class="cta-box">
+      <h3>Building out an array?</h3>
+      <p>Send the array layout or a module count and we'll build a full BOM against live stock, rail to connectors.</p>
+      <div class="btn-row"><a href="#" class="btn btn-primary nav-tab" data-page="catalog-form">Request a Quote</a><a href="#" class="btn btn-outline" onclick="showPage('products'); return false;">All Product Lines</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PAGE: SMART POWER ══════════════ -->
+<section data-page="cat-smart">
+  <div class="page-hero">
+    <h1>Smart Power &amp; <em>Building</em></h1>
+    <p>Smart panels, submetering, lighting control, sensors, and surge protection — the layer that makes a building measurable.</p>
+  </div>
+  <div class="page-body">
+    <a href="#" class="back-link" onclick="showPage('products'); return false;"><svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg> All Product Lines</a>
+    <div class="cat-banner visual v-smart"><svg viewBox="0 0 24 24"><path d="M3 10.5L12 3l9 7.5V20a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 20z"/><path d="M13 9l-3 4.5h3L12 18"/></svg></div>
+    <div class="sub-grid">
+      <div class="sub-card"><div class="sub-visual visual v-smart"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="1.5"/><path d="M10 8h4M10 12h4"/><circle cx="12" cy="17" r="1.3"/></svg></div><div class="sub-body"><h4>Smart Load Centers</h4><p>Circuit-level metered panels with app control, remote breaker actuation, and backup-circuit prioritization for storage-paired homes.</p><div class="sub-spec">100–400A · MOQ 5</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-smart"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div><div class="sub-body"><h4>Revenue-Grade Submetering</h4><p>ANSI C12.20 0.5% accuracy submeters, split-core and solid-core CTs, and multi-circuit panel meters for tenant billing.</p><div class="sub-spec">0.5% ANSI · MOQ 10</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-smart"><svg viewBox="0 0 24 24"><rect x="2" y="8" width="20" height="8" rx="4"/><circle cx="8" cy="12" r="2.6"/></svg></div><div class="sub-body"><h4>Smart Outlets &amp; Switches</h4><p>Wi-Fi, Z-Wave, and Matter-certified receptacles, dimmers, and switches in commercial and residential grade, with tamper-resistant options.</p><div class="sub-spec">Matter / Z-Wave · MOQ 50</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-smart"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 5V3M12 21v-2M5 12H3M21 12h-2"/><path d="M7.5 7.5L6 6M16.5 16.5L18 18"/></svg></div><div class="sub-body"><h4>Occupancy &amp; Daylight Controls</h4><p>Ceiling and wall-mount occupancy sensors, daylight harvesting photocells, and low-voltage power packs for Title 24 compliance.</p><div class="sub-spec">Title 24 · MOQ 25</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-smart"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M13 8l-2.5 4H13l-1 3.5"/></svg></div><div class="sub-body"><h4>Surge Protection Devices</h4><p>Type 1 and Type 2 SPDs from 50 kA to 200 kA per phase, panel-mount and DIN-rail, with status contacts and replaceable modules.</p><div class="sub-spec">50–200 kA · MOQ 10</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-smart"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="10" rx="1.5"/><path d="M7 18h10M9 14v4M15 14v4"/><path d="M7 8h4M14 8h3"/></svg></div><div class="sub-body"><h4>Networked Lighting Controllers</h4><p>DALI-2 and 0-10V room controllers, DMX gateways, and BACnet bridges that hand lighting zones off to the building system.</p><div class="sub-spec">DALI-2 / BACnet · MOQ 10</div></div></div>
+    </div>
+    <div class="cta-box">
+      <h3>Rolling out submetering or controls?</h3>
+      <p>Send the site count and panel schedule — we'll spec the meters, CTs, and gateways and quote the full rollout.</p>
+      <div class="btn-row"><a href="#" class="btn btn-primary nav-tab" data-page="catalog-form">Request a Quote</a><a href="#" class="btn btn-outline" onclick="showPage('products'); return false;">All Product Lines</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PAGE: TOOLS ══════════════ -->
+<section data-page="cat-tools">
+  <div class="page-hero">
+    <h1>Tools &amp; <em>Line Accessories</em></h1>
+    <p>The consumables and hand tools that reorder every month — crimpers, meters, testers, PPE, benders, and torque tooling.</p>
+  </div>
+  <div class="page-body">
+    <a href="#" class="back-link" onclick="showPage('products'); return false;"><svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg> All Product Lines</a>
+    <div class="cat-banner visual v-tools"><svg viewBox="0 0 24 24"><path d="M14.5 6.5a4.2 4.2 0 0 0 5.3 5.3l-8.6 8.6a2.2 2.2 0 0 1-3.1-3.1z"/><path d="M18.7 3.3l-2.6 2.6M20.7 5.3l-2.6 2.6"/></svg></div>
+    <div class="sub-grid">
+      <div class="sub-card"><div class="sub-visual visual v-tools"><svg viewBox="0 0 24 24"><path d="M4 4l7 7M20 4l-7 7"/><path d="M11 11h2v9h-2z"/></svg></div><div class="sub-body"><h4>Crimpers &amp; Cable Cutters</h4><p>Manual, ratcheting, and battery hydraulic crimpers with die sets, plus ratchet cable cutters for copper and aluminum up to 750 MCM.</p><div class="sub-spec">To 750 MCM · MOQ 5</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-tools"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="14" rx="2"/><path d="M8 7h8M9 11h6"/><path d="M9 17v4M15 17v4"/></svg></div><div class="sub-body"><h4>Multimeters &amp; Clamp Meters</h4><p>CAT III and CAT IV true-RMS multimeters and clamp meters to 1000A, with inrush capture, low-Z mode, and NIST-traceable calibration.</p><div class="sub-spec">CAT III / IV · MOQ 10</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-tools"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/><path d="M8 9l2.5 2.5L16 7"/></svg></div><div class="sub-body"><h4>Insulation &amp; Loop Testers</h4><p>Megohmmeters to 1000V, earth-ground loop testers, phase rotation meters, and full installation test kits for commissioning.</p><div class="sub-spec">To 1000V · MOQ 5</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-tools"><svg viewBox="0 0 24 24"><path d="M3 16a9 9 0 0 1 18 0z"/><path d="M9 16V8a3 3 0 0 1 6 0v8"/><path d="M2 19h20"/></svg></div><div class="sub-body"><h4>Arc-Flash PPE &amp; Kits</h4><p>Cat 2 and Cat 4 arc-flash kits, insulated gloves with liners, face shields, hoods, and blanket kits — all with current test certificates.</p><div class="sub-spec">Cat 2 &amp; Cat 4 · MOQ 5</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-tools"><svg viewBox="0 0 24 24"><circle cx="8" cy="14" r="5"/><path d="M13 11l7-7M17 4h3v3"/></svg></div><div class="sub-body"><h4>Fish Tape &amp; Conduit Benders</h4><p>Steel and fiberglass fish tape, rod kits, hand benders for EMT and rigid, plus electric and hydraulic benders to 2 inch.</p><div class="sub-spec">To 2 in · MOQ 5</div></div></div>
+      <div class="sub-card"><div class="sub-visual visual v-tools"><svg viewBox="0 0 24 24"><path d="M12 3v6"/><circle cx="12" cy="12" r="3"/><path d="M12 15v6"/><path d="M6 8l1.5 1.5M18 8l-1.5 1.5"/></svg></div><div class="sub-body"><h4>Torque Tools &amp; Terminal Kits</h4><p>Calibrated torque screwdrivers and wrenches to NEC 110.14(D), plus lug kits, anti-oxidant compound, and terminal assortment cases.</p><div class="sub-spec">NEC 110.14(D) · MOQ 10</div></div></div>
+    </div>
+    <div class="cta-box">
+      <h3>Setting up a standing reorder?</h3>
+      <p>Send your consumables list once and we'll set it as a recurring order at your tier price, shipped on your schedule.</p>
+      <div class="btn-row"><a href="#" class="btn btn-primary nav-tab" data-page="catalog-form">Request a Quote</a><a href="#" class="btn btn-outline" onclick="showPage('products'); return false;">All Product Lines</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PAGE: CATALOG REQUEST ══════════════ -->
+<section data-page="catalog-form">
+  <div class="page-hero">
+    <h1>Request a <em>Catalog</em></h1>
+    <p>Tell us about the business and what you're sourcing. We'll verify the account and send pricing, availability, and MOQ details — usually within one business day.</p>
+  </div>
+  <div class="page-body" style="max-width:860px">
+    <form id="catalogForm" onsubmit="submitCatalog(event)">
+      <div class="form-row">
+        <div class="field"><label for="cf-name">Your Name</label><input type="text" id="cf-name" placeholder="Jordan Reyes" required></div>
+        <div class="field"><label for="cf-company">Company Name</label><input type="text" id="cf-company" placeholder="Reyes Electric Supply"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="cf-email">Work Email</label><input type="email" id="cf-email" placeholder="you@company.com" required></div>
+        <div class="field"><label for="cf-phone">Phone</label><input type="tel" id="cf-phone" placeholder="(704) 555-0100"></div>
+      </div>
+
+      <div class="field">
+        <label>Product Lines You're Interested In</label>
+        <div class="check-grid">
+          <label class="check-item"><input type="checkbox" id="cf-ev"><span>EV Charging</span></label>
+          <label class="check-item"><input type="checkbox" id="cf-storage"><span>Power Storage</span></label>
+          <label class="check-item"><input type="checkbox" id="cf-industrial"><span>Industrial Electrical</span></label>
+          <label class="check-item"><input type="checkbox" id="cf-solar"><span>Renewable &amp; Solar</span></label>
+          <label class="check-item"><input type="checkbox" id="cf-smart"><span>Smart Power</span></label>
+          <label class="check-item"><input type="checkbox" id="cf-tools"><span>Tools &amp; Accessories</span></label>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="cf-volume">Estimated Monthly Volume</label>
+          <select id="cf-volume">
+            <option value="">Select a range</option>
+            <option>Under $5,000</option>
+            <option>$5,000 – $25,000</option>
+            <option>$25,000 – $100,000</option>
+            <option>$100,000+</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cf-type">Business Type</label>
+          <select id="cf-type">
+            <option value="">Select a type</option>
+            <option>Electrical Contractor</option>
+            <option>Reseller / Retailer</option>
+            <option>EV Installer</option>
+            <option>Solar Installer</option>
+            <option>Facility / Property Management</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="cf-timeline">Timeline</label>
+        <select id="cf-timeline">
+          <option value="">Select a timeline</option>
+          <option>Ready to order now</option>
+          <option>Within 30 days</option>
+          <option>1 – 3 months</option>
+          <option>Researching / building a bid</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="cf-products">Specific Products, Brands, or Part Numbers</label>
+        <textarea id="cf-products" rows="4" placeholder="e.g. 48A Level 2 chargers with NACS, 200A main-breaker load centers, 10 AWG PV wire by the reel, specific manufacturer part numbers..."></textarea>
+      </div>
+
+      <div class="field">
+        <label for="cf-message">About Your Business</label>
+        <textarea id="cf-message" rows="6" placeholder="What you sell or install, who your customers are, and what you need from a distributor. Include anything that helps us build the right catalog: price points, certifications, preferred brands, reorder frequency, or freight requirements."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Send Catalog Request</button>
+      <span class="form-note">Voltiva sells to businesses only. A resale certificate or contractor license is required before an account is activated. There is no cost to apply.</span>
+      <div class="form-success" id="catalogSuccess">✓ Request ready — your email client should be opening now.</div>
+    </form>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
 <footer>
-  <div class="wrap">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="#top" class="brand">
-          <svg class="brand-mark" viewBox="0 0 120 96" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <polygon points="8,6 62,6 45,90" fill="#ffffff"/>
-            <polygon points="66,6 112,6 55,90" fill="#ffffff"/>
-            <polygon points="46,22 30,48 42,48 24,86 48,52 36,52" fill="#0d2426"/>
-            <polygon points="45,27 34,48 41,48 28,80 45,53 38,53" fill="#ffffff"/>
-          </svg>
-          <span class="brand-word">Voltiva</span>
-        </a>
-        <p>Wholesale distribution for electrical, EV charging, and power equipment. Trade accounts only.</p>
-        <ul class="footer-contact">
-          <li>Distribution HQ — Charlotte, NC</li>
-          <li>wholesale@voltiva.com</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Trade</h4>
-        <ul>
-          <li><a href="#catalog">Catalog Lines</a></li>
-          <li><a href="#offer">What We Offer</a></li>
-          <li><a href="#apply">Apply for Access</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Network</h4>
-        <ul>
-          <li><a href="#network">Distribution Centers</a></li>
-          <li><a href="#network">Coverage</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Support</h4>
-        <ul>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#apply">Returns &amp; RMA</a></li>
-        </ul>
-      </div>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo nav-tab" data-page="home">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="62" height="62" rx="15" fill="#241a13" stroke="#c8964e" stroke-width="1.5"/>
+          <path d="M36 9L20 35h10L26 55l18-28H32L36 9z" fill="#e5bd80"/>
+        </svg>
+        <span>
+          <span class="brand-word">Volt<span>iva</span></span>
+          <span class="brand-sub">Wholesale Supply</span>
+        </span>
+      </a>
+      <p>Wholesale distribution for electrical, EV charging, storage, and solar equipment. Trade accounts only — not a consumer storefront.</p>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Voltiva Distribution</span>
-      <span>Trade accounts only — not a consumer storefront</span>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a onclick="showPage('cat-ev')">EV Charging</a></li>
+        <li><a onclick="showPage('cat-storage')">Power Storage</a></li>
+        <li><a onclick="showPage('cat-industrial')">Industrial Electrical</a></li>
+        <li><a onclick="showPage('cat-solar')">Renewable &amp; Solar</a></li>
+        <li><a onclick="showPage('cat-smart')">Smart Power</a></li>
+        <li><a onclick="showPage('cat-tools')">Tools &amp; Accessories</a></li>
+      </ul>
     </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a onclick="showPage('about')">About Voltiva</a></li>
+        <li><a onclick="showPage('wholesale')">Wholesale Program</a></li>
+        <li><a onclick="showPage('contact')">Contact</a></li>
+        <li><a onclick="showPage('catalog-form')">Request a Catalog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Wholesale Desk</h4>
+      <ul>
+        <li><a href="mailto:wholesale@voltiva.com">wholesale@voltiva.com</a></li>
+        <li><a href="tel:+17045550118">(704) 555-0118</a></li>
+        <li>Charlotte, North Carolina</li>
+        <li>Mon–Fri, 7am–6pm ET</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 <b>Voltiva Distribution</b>. All rights reserved.</span>
+    <span>Trade accounts only &middot; Resale certificate required</span>
   </div>
 </footer>
 
