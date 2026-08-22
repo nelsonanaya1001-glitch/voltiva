@@ -163,5 +163,5 @@ showPage('home');
 /* ── Nav shadow on scroll ───────────────────────────────── */
 window.addEventListener('scroll', () => {
   document.querySelector('nav').style.boxShadow =
-    window.scrollY > 10 ? '0 6px 34px rgba(0,0,0,0.5)' : 'none';
+    window.scrollY > 10 ? '0 4px 24px rgba(14,42,29,0.10)' : 'none';
 });
