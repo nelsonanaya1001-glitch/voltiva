@@ -41,12 +41,10 @@ document.querySelectorAll('.nav-tab').forEach(a => {
 /* ── Hero showcase ──────────────────────────────────────── */
 const slides = document.querySelectorAll('.showcase .slide');
 const slideInfo = [
-  ['EV Charging & Infrastructure', 'Level 2 & DC Fast · 3,400 SKUs'],
-  ['Power Storage & Batteries',    'LFP racks & UPS · 2,100 SKUs'],
-  ['Industrial Electrical',        'Breakers to busbar · 18,600 SKUs'],
-  ['Renewable & Solar',            'Inverters & racking · 6,800 SKUs'],
-  ['Smart Power & Building',       'Metering & controls · 5,300 SKUs'],
-  ['Tools & Line Accessories',     'Meters, PPE & tooling · 5,800 SKUs']
+  ['Household Electronics',   'Kitchen, smart home & displays · 11,400 SKUs'],
+  ['Beauty & Personal Care',  'Skincare, cosmetics & grooming · 9,800 SKUs'],
+  ['Health & Wellness',       'Supplements, fitness & devices · 8,600 SKUs'],
+  ['Toys & Games',            'STEM, board games & outdoor · 7,300 SKUs']
 ];
 
 const dotWrap = document.getElementById('slideDots');
@@ -134,12 +132,10 @@ function submitCatalog(e) {
   e.preventDefault();
 
   const lines = [
-    document.getElementById('cf-ev').checked && 'EV Charging & Infrastructure',
-    document.getElementById('cf-storage').checked && 'Power Storage & Batteries',
-    document.getElementById('cf-industrial').checked && 'Industrial Electrical',
-    document.getElementById('cf-solar').checked && 'Renewable & Solar',
-    document.getElementById('cf-smart').checked && 'Smart Power & Building',
-    document.getElementById('cf-tools').checked && 'Tools & Line Accessories'
+    document.getElementById('cf-electronics').checked && 'Household Electronics',
+    document.getElementById('cf-beauty').checked && 'Beauty & Personal Care',
+    document.getElementById('cf-health').checked && 'Health & Wellness',
+    document.getElementById('cf-toys').checked && 'Toys & Games'
   ].filter(Boolean);
 
   let b = 'CATALOG REQUEST — VOLTIVA WHOLESALE\n===================================\n\n';
@@ -147,7 +143,7 @@ function submitCatalog(e) {
   if (val('cf-company')) b += 'Company: ' + val('cf-company') + '\n';
   b += 'Email: ' + val('cf-email') + '\n';
   if (val('cf-phone')) b += 'Phone: ' + val('cf-phone') + '\n\n';
-  if (lines.length) b += 'Product Lines: ' + lines.join(', ') + '\n';
+  if (lines.length) b += 'Categories: ' + lines.join(', ') + '\n';
   if (val('cf-volume')) b += 'Monthly Volume: ' + val('cf-volume') + '\n';
   if (val('cf-type')) b += 'Business Type: ' + val('cf-type') + '\n';
   if (val('cf-timeline')) b += 'Timeline: ' + val('cf-timeline') + '\n';

@@ -172,12 +172,10 @@ nav{
   fill:none;stroke-linecap:round;stroke-linejoin:round;
   filter:drop-shadow(0 6px 16px rgba(6,32,20,.30));
 }
-.v-ev{--g1:#34b174;--g2:#0d4b2f}
-.v-storage{--g1:#54c489;--g2:#12603c}
-.v-industrial{--g1:#249063;--g2:#08331f}
-.v-solar{--g1:#7ed092;--g2:#1c7247}
-.v-smart{--g1:#3aa478;--g2:#0b422b}
-.v-tools{--g1:#5aa877;--g2:#134028}
+.v-electronics{--g1:#34b174;--g2:#0d4b2f}
+.v-beauty{--g1:#7ed092;--g2:#1c7247}
+.v-health{--g1:#249063;--g2:#08331f}
+.v-toys{--g1:#54c489;--g2:#12603c}
 
 /* ── HERO ──────────────────────────────────────────────── */
 .hero{
@@ -248,7 +246,8 @@ nav{
 /* ── CATEGORY GRID ─────────────────────────────────────── */
 .cat-grid{
   max-width:1180px;margin:0 auto;
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:1.6rem;
+  display:grid;gap:1.6rem;
+  grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
 }
 .cat-card{
   background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
@@ -280,11 +279,19 @@ nav{
   background:var(--accent-pale);border:1px solid rgba(26,127,79,.16);
   color:var(--accent-deep);
 }
+.cat-count{
+  font-size:.8rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--accent);
+}
 .cat-more{
   margin-top:1.3rem;font-size:.75rem;font-weight:800;letter-spacing:.13em;
   text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:.45rem;
 }
-.cat-card:hover .cat-more{gap:.8rem}
+.cat-card:hover .cat-count{
+  font-size:.8rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--accent);
+}
+.cat-more{gap:.8rem}
 .cat-more svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;fill:none;transition:all .3s}
 
 /* ── PAGE HERO (sub pages) ─────────────────────────────── */
