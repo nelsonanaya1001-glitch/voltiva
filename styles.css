@@ -220,16 +220,6 @@ nav{
 .hero-sub{
   font-size:1.06rem;color:var(--muted);max-width:520px;margin-bottom:2.2rem;
 }
-.hero-stats{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:1.2rem;margin-top:3rem;padding-top:2rem;
-  border-top:1px solid var(--border);
-}
-.hero-stats .n{font-size:1.55rem;color:var(--accent)}
-.hero-stats .l{
-  font-size:.66rem;color:var(--muted-dim);letter-spacing:.14em;
-  text-transform:uppercase;font-weight:700;margin-top:.3rem;
-}
 
 /* ── HERO SHOWCASE ─────────────────────────────────────── */
 .showcase{
@@ -610,7 +600,6 @@ footer .brand-sub{color:rgba(255,255,255,.55)}
   .page-hero{padding:7.5rem 1.2rem 2.6rem}
   .page-body{padding:2.2rem 1.2rem 3.5rem}
   .wrap{padding:0 1.2rem}
-  .hero-stats{grid-template-columns:repeat(2,1fr);gap:1.4rem}
   .stats-bar{grid-template-columns:repeat(2,1fr);gap:1.8rem;padding:2rem 1.2rem}
   .form-row{grid-template-columns:1fr}
   .footer-top{grid-template-columns:1fr;gap:1.8rem}
