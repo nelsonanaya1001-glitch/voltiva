@@ -47,7 +47,7 @@ body::before{
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
 }
 
-h1,h2,h3,h4,.stat-item h3,.n{
+h1,h2,h3,h4,.n{
   font-family:'Fraunces','Georgia',serif;
   font-weight:600;
   line-height:1.12;
@@ -102,7 +102,13 @@ nav{
 }
 .logo-mark{height:34px;width:auto;display:block;flex-shrink:0}
 .logo-text{display:flex;flex-direction:column;gap:4px}
-.logo-word{height:14px;width:auto;display:block}
+.logo-word{
+  display:block;
+  font-family:'Fraunces','Georgia',serif;
+  font-size:1.46rem;font-weight:600;
+  letter-spacing:-.012em;line-height:1;
+  color:currentColor;
+}
 .brand-sub{
   display:block;font-family:'Manrope',sans-serif;
   font-size:.55rem;font-weight:700;letter-spacing:.24em;
@@ -329,10 +335,12 @@ nav{
 .cat-body{padding:1.7rem 1.6rem 1.8rem;position:relative}
 .cat-icon{
   position:absolute;top:-26px;left:1.6rem;
-  width:52px;height:52px;border-radius:13px;
-  background:linear-gradient(135deg,var(--accent-lt),var(--accent-deep));
+  width:52px;height:52px;border-radius:14px;
+  /* Darker than the artwork behind it, with a ring so the chip still reads
+     where it overlaps the illustrated panel. */
+  background:linear-gradient(140deg,var(--accent),var(--accent-deep));
   display:flex;align-items:center;justify-content:center;
-  box-shadow:0 8px 20px rgba(14,42,29,.18);
+  box-shadow:0 0 0 4px var(--surface), 0 10px 22px rgba(8,40,24,.28);
 }
 .cat-icon svg{width:24px;height:24px;stroke:#ffffff;stroke-width:1.9;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .cat-body h3{font-size:1.32rem;margin:1.1rem 0 .6rem}
@@ -401,18 +409,6 @@ nav{
 }
 
 /* ── STATS BAR ─────────────────────────────────────────── */
-.stats-bar{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;
-  max-width:1180px;margin:0 auto;padding:2.6rem 2rem;
-  background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
-}
-.stat-item{text-align:center}
-.stat-item h3{font-size:2.15rem;color:var(--accent);margin-bottom:.2rem}
-.stat-item p{
-  font-size:.68rem;color:var(--muted-dim);letter-spacing:.14em;
-  text-transform:uppercase;font-weight:700;
-}
-
 /* ── SPLIT / FEATURE ROWS ──────────────────────────────── */
 .split{
   display:grid;grid-template-columns:1fr 1fr;gap:3.4rem;align-items:center;
@@ -559,7 +555,7 @@ footer .nav-logo{
   flex-direction:column;align-items:flex-start;gap:.65rem;color:#fff;
 }
 footer .logo-mark{height:50px}
-footer .logo-word{height:16px}
+footer .logo-word{font-size:1.62rem}
 footer .brand-sub{color:rgba(255,255,255,.55)}
 .footer-top{
   max-width:1180px;margin:0 auto;
@@ -600,7 +596,6 @@ footer .brand-sub{color:rgba(255,255,255,.55)}
   .page-hero{padding:7.5rem 1.2rem 2.6rem}
   .page-body{padding:2.2rem 1.2rem 3.5rem}
   .wrap{padding:0 1.2rem}
-  .stats-bar{grid-template-columns:repeat(2,1fr);gap:1.8rem;padding:2rem 1.2rem}
   .form-row{grid-template-columns:1fr}
   .footer-top{grid-template-columns:1fr;gap:1.8rem}
   .footer-bottom{flex-direction:column;gap:.5rem}
