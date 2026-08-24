@@ -210,6 +210,79 @@ function submitCatalog(e) {
 /* ── Init ───────────────────────────────────────────────── */
 showPage('home');
 
+/* ── Category product menu ──────────────────────────────────
+   Builds itself from the category page already in the DOM, so the
+   products in the menu can never drift from the products on the page.
+   ────────────────────────────────────────────────────────── */
+const catModal = document.getElementById('catModal');
+let lastFocus = null;
+let uidSeq = 0;
+
+// Cloned artwork carries gradient ids; re-namespace them so the copies
+// stay valid alongside the originals.
+function reid(node) {
+  const seq = ++uidSeq;
+  node.querySelectorAll('[id]').forEach(el => {
+    const old = el.id, next = `${old}-m${seq}`;
+    el.id = next;
+    node.querySelectorAll('*').forEach(t => {
+      ['fill', 'stroke'].forEach(a => {
+        if (t.getAttribute(a) === `url(#${old})`) t.setAttribute(a, `url(#${next})`);
+      });
+    });
+  });
+  return node;
+}
+
+function openCatMenu(page) {
+  const sec = document.querySelector(`section[data-page="${page}"]`);
+  if (!sec) return;
+
+  document.getElementById('modalTitle').innerHTML = sec.querySelector('.page-hero h1').innerHTML;
+  document.getElementById('modalBlurb').textContent = sec.querySelector('.page-hero p').textContent;
+
+  const art = document.getElementById('modalArt');
+  art.innerHTML = '';
+  const banner = sec.querySelector('.cat-banner .scene');
+  if (banner) art.appendChild(reid(banner.cloneNode(true)));
+
+  const wrap = document.getElementById('modalProducts');
+  wrap.innerHTML = '';
+  sec.querySelectorAll('.sub-card').forEach(card => {
+    const item = document.createElement('div');
+    item.className = 'modal-item';
+
+    const thumb = document.createElement('div');
+    thumb.className = 'modal-thumb ' + card.querySelector('.sub-visual').className.replace('sub-visual', '').trim();
+    thumb.appendChild(card.querySelector('.sub-visual svg').cloneNode(true));
+
+    const body = document.createElement('div');
+    body.innerHTML = card.querySelector('.sub-body').innerHTML;
+
+    item.append(thumb, body);
+    wrap.appendChild(item);
+  });
+
+  const full = document.getElementById('modalFull');
+  full.onclick = e => { e.preventDefault(); closeCatMenu(); showPage(page); };
+
+  lastFocus = document.activeElement;
+  catModal.hidden = false;
+  document.body.style.overflow = 'hidden';
+  document.querySelector('.modal-close').focus();
+}
+
+function closeCatMenu() {
+  catModal.hidden = true;
+  document.body.style.overflow = '';
+  if (lastFocus) lastFocus.focus();
+}
+
+catModal.addEventListener('click', e => { if (e.target.closest('[data-close]')) closeCatMenu(); });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && !catModal.hidden) closeCatMenu();
+});
+
 /* ── Nav shadow on scroll ───────────────────────────────── */
 window.addEventListener('scroll', () => {
   document.querySelector('nav').style.boxShadow =
