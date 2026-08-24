@@ -216,23 +216,6 @@ showPage('home');
    ────────────────────────────────────────────────────────── */
 const catModal = document.getElementById('catModal');
 let lastFocus = null;
-let uidSeq = 0;
-
-// Cloned artwork carries gradient ids; re-namespace them so the copies
-// stay valid alongside the originals.
-function reid(node) {
-  const seq = ++uidSeq;
-  node.querySelectorAll('[id]').forEach(el => {
-    const old = el.id, next = `${old}-m${seq}`;
-    el.id = next;
-    node.querySelectorAll('*').forEach(t => {
-      ['fill', 'stroke'].forEach(a => {
-        if (t.getAttribute(a) === `url(#${old})`) t.setAttribute(a, `url(#${next})`);
-      });
-    });
-  });
-  return node;
-}
 
 function openCatMenu(page) {
   const sec = document.querySelector(`section[data-page="${page}"]`);
@@ -244,7 +227,7 @@ function openCatMenu(page) {
   const art = document.getElementById('modalArt');
   art.innerHTML = '';
   const banner = sec.querySelector('.cat-banner .scene');
-  if (banner) art.appendChild(reid(banner.cloneNode(true)));
+  if (banner) art.appendChild(banner.cloneNode(true));
 
   const wrap = document.getElementById('modalProducts');
   wrap.innerHTML = '';
