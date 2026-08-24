@@ -38,8 +38,18 @@ document.querySelectorAll('.nav-tab').forEach(a => {
   });
 });
 
-/* ── Hero showcase ──────────────────────────────────────── */
-const slides = document.querySelectorAll('.showcase .slide');
+/* ── Hero showcase ──────────────────────────────────────────
+   One rAF clock drives the progress bar AND the auto-advance, so
+   pausing freezes both at exactly the same point.
+   ────────────────────────────────────────────────────────── */
+const showcase = document.getElementById('showcase');
+const slides   = [...document.querySelectorAll('.showcase .slide')];
+const thumbs   = [...document.querySelectorAll('.thumb')];
+const scBar    = document.getElementById('scBar');
+const slideCopy = document.getElementById('slideCopy');
+const slideCat  = document.getElementById('slideCat');
+const slideMeta = document.getElementById('slideMeta');
+
 const slideInfo = [
   ['Household Electronics',   'Kitchen, smart home & displays · 11,400 SKUs'],
   ['Beauty & Personal Care',  'Skincare, cosmetics & grooming · 9,800 SKUs'],
@@ -47,37 +57,81 @@ const slideInfo = [
   ['Toys & Games',            'STEM, board games & outdoor · 7,300 SKUs']
 ];
 
-const dotWrap = document.getElementById('slideDots');
-const slideCat = document.getElementById('slideCat');
-const slideMeta = document.getElementById('slideMeta');
-let cur = 0;
-let slideTimer;
+const SLIDE_MS = 5600;
+const reduced  = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-slides.forEach((_, i) => {
-  const b = document.createElement('button');
-  b.className = 'sdot' + (i === 0 ? ' active' : '');
-  b.type = 'button';
-  b.setAttribute('aria-label', 'Show ' + slideInfo[i][0]);
-  b.addEventListener('click', () => { goSlide(i); resetTimer(); });
-  dotWrap.appendChild(b);
-});
-const dots = dotWrap.querySelectorAll('.sdot');
+let cur = 0, elapsed = 0, lastTs = null, paused = false;
 
 function goSlide(n) {
-  slides[cur].classList.remove('active');
-  dots[cur].classList.remove('active');
-  cur = (n + slides.length) % slides.length;
-  slides[cur].classList.add('active');
-  dots[cur].classList.add('active');
-  slideCat.textContent = slideInfo[cur][0];
+  const next = (n + slides.length) % slides.length;
+
+  slides[cur].classList.remove('is-active');
+  slides[cur].setAttribute('aria-hidden', 'true');
+  thumbs[cur].classList.remove('is-active');
+  thumbs[cur].setAttribute('aria-selected', 'false');
+
+  cur = next;
+
+  slides[cur].classList.add('is-active');
+  slides[cur].setAttribute('aria-hidden', 'false');
+  thumbs[cur].classList.add('is-active');
+  thumbs[cur].setAttribute('aria-selected', 'true');
+
+  slideCat.textContent  = slideInfo[cur][0];
   slideMeta.textContent = slideInfo[cur][1];
+
+  // restart the copy entrance
+  slideCopy.classList.remove('enter');
+  void slideCopy.offsetWidth;
+  slideCopy.classList.add('enter');
+
+  elapsed = 0;
 }
 
-function resetTimer() {
-  clearInterval(slideTimer);
-  slideTimer = setInterval(() => goSlide(cur + 1), 4200);
+function tick(ts) {
+  if (lastTs === null) lastTs = ts;
+  const dt = ts - lastTs;
+  lastTs = ts;
+
+  // don't burn through slides while the hero is hidden behind another tab
+  const onScreen = showcase.offsetParent !== null && !document.hidden;
+
+  if (!paused && !reduced && onScreen) {
+    elapsed += dt;
+    if (elapsed >= SLIDE_MS) goSlide(cur + 1);
+  }
+  scBar.style.transform = 'scaleX(' + (reduced ? 0 : Math.min(elapsed / SLIDE_MS, 1)) + ')';
+  requestAnimationFrame(tick);
 }
-resetTimer();
+requestAnimationFrame(tick);
+
+function setPaused(v) {
+  paused = v;
+  showcase.classList.toggle('is-paused', v);
+}
+showcase.addEventListener('mouseenter', () => setPaused(true));
+showcase.addEventListener('mouseleave', () => setPaused(false));
+showcase.addEventListener('focusin',    () => setPaused(true));
+showcase.addEventListener('focusout',   () => setPaused(false));
+
+thumbs.forEach(t => t.addEventListener('click', () => goSlide(+t.dataset.i)));
+document.getElementById('scPrev').addEventListener('click', () => goSlide(cur - 1));
+document.getElementById('scNext').addEventListener('click', () => goSlide(cur + 1));
+
+showcase.addEventListener('keydown', e => {
+  if (e.key === 'ArrowLeft')  { goSlide(cur - 1); e.preventDefault(); }
+  if (e.key === 'ArrowRight') { goSlide(cur + 1); e.preventDefault(); }
+});
+
+// swipe
+let touchX = null;
+showcase.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+showcase.addEventListener('touchend', e => {
+  if (touchX === null) return;
+  const dx = e.changedTouches[0].clientX - touchX;
+  if (Math.abs(dx) > 45) goSlide(cur + (dx < 0 ? 1 : -1));
+  touchX = null;
+}, { passive: true });
 
 /* ── Card reveal on scroll ──────────────────────────────── */
 const observer = new IntersectionObserver(entries => {

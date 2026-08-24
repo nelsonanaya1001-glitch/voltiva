@@ -58,16 +58,51 @@
       </div>
     </div>
 
-    <div class="showcase">
-      <div class="slide active"><div class="visual v-electronics"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div></div>
-      <div class="slide"><div class="visual v-beauty"><svg viewBox="0 0 24 24"><path d="M12 2.7S6.5 9 6.5 13a5.5 5.5 0 0 0 11 0C17.5 9 12 2.7 12 2.7z"/></svg></div></div>
-      <div class="slide"><div class="visual v-health"><svg viewBox="0 0 24 24"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 22l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></div></div>
-      <div class="slide"><div class="visual v-toys"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><circle cx="17" cy="17" r="4"/></svg></div></div>
-      <div class="slide-overlay">
-        <div class="slide-cat" id="slideCat">Household Electronics</div>
-        <div class="slide-meta" id="slideMeta">Kitchen, smart home &amp; displays &middot; 11,400 SKUs</div>
-        <div class="slide-dots" id="slideDots"></div>
+    <div class="showcase" id="showcase" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Product categories">
+      <div class="slide-stack">
+      <div class="slide is-active" aria-hidden="false">
+        <div class="visual v-electronics"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
       </div>
+      <div class="slide" aria-hidden="true">
+        <div class="visual v-beauty"><svg viewBox="0 0 24 24"><path d="M12 2.7S6.5 9 6.5 13a5.5 5.5 0 0 0 11 0C17.5 9 12 2.7 12 2.7z"/></svg></div>
+      </div>
+      <div class="slide" aria-hidden="true">
+        <div class="visual v-health"><svg viewBox="0 0 24 24"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 22l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
+      </div>
+      <div class="slide" aria-hidden="true">
+        <div class="visual v-toys"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><circle cx="17" cy="17" r="4"/></svg></div>
+      </div>
+      </div>
+
+      <button type="button" class="sc-arrow prev" id="scPrev" aria-label="Previous category">
+        <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button type="button" class="sc-arrow next" id="scNext" aria-label="Next category">
+        <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+
+      <div class="showcase-overlay">
+        <div class="slide-copy enter" id="slideCopy" aria-live="polite">
+          <div class="slide-cat" id="slideCat">Household Electronics</div>
+          <div class="slide-meta" id="slideMeta">Kitchen, smart home &amp; displays &middot; 11,400 SKUs</div>
+        </div>
+        <div class="thumbs" id="thumbs" role="tablist" aria-label="Choose a category">
+          <button type="button" class="thumb is-active" data-i="0" role="tab" aria-selected="true" aria-label="Household Electronics" title="Household Electronics">
+            <span class="visual v-electronics"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
+          </button>
+          <button type="button" class="thumb" data-i="1" role="tab" aria-selected="false" aria-label="Beauty & Personal Care" title="Beauty & Personal Care">
+            <span class="visual v-beauty"><svg viewBox="0 0 24 24"><path d="M12 2.7S6.5 9 6.5 13a5.5 5.5 0 0 0 11 0C17.5 9 12 2.7 12 2.7z"/></svg></span>
+          </button>
+          <button type="button" class="thumb" data-i="2" role="tab" aria-selected="false" aria-label="Health & Wellness" title="Health & Wellness">
+            <span class="visual v-health"><svg viewBox="0 0 24 24"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 22l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+          </button>
+          <button type="button" class="thumb" data-i="3" role="tab" aria-selected="false" aria-label="Toys & Games" title="Toys & Games">
+            <span class="visual v-toys"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><circle cx="17" cy="17" r="4"/></svg></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="sc-progress"><div class="sc-bar" id="scBar"></div></div>
     </div>
   </div>
 </section>
