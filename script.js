@@ -51,10 +51,9 @@ const slideCat  = document.getElementById('slideCat');
 const slideMeta = document.getElementById('slideMeta');
 
 const slideInfo = [
-  ['Household Electronics',   'Kitchen, smart home & displays · 11,400 SKUs'],
-  ['Beauty & Personal Care',  'Skincare, cosmetics & grooming · 9,800 SKUs'],
-  ['Health & Wellness',       'Supplements, fitness & devices · 8,600 SKUs'],
-  ['Toys & Games',            'STEM, board games & outdoor · 7,300 SKUs']
+  ['Household Electronics', 'Kitchen, smart home & displays · 11,400 SKUs'],
+  ['Toys & Games',          'STEM, board games & outdoor · 7,300 SKUs'],
+  ['Logistics Services',    'Freight, fulfilment & warehousing · 18 sites']
 ];
 
 const SLIDE_MS = 5600;
@@ -187,9 +186,8 @@ function submitCatalog(e) {
 
   const lines = [
     document.getElementById('cf-electronics').checked && 'Household Electronics',
-    document.getElementById('cf-beauty').checked && 'Beauty & Personal Care',
-    document.getElementById('cf-health').checked && 'Health & Wellness',
-    document.getElementById('cf-toys').checked && 'Toys & Games'
+    document.getElementById('cf-toys').checked && 'Toys & Games',
+    document.getElementById('cf-logistics').checked && 'Logistics Services'
   ].filter(Boolean);
 
   let b = 'CATALOG REQUEST — VOLTIVA WHOLESALE\n===================================\n\n';
@@ -269,5 +267,5 @@ document.addEventListener('keydown', e => {
 /* ── Nav shadow on scroll ───────────────────────────────── */
 window.addEventListener('scroll', () => {
   document.querySelector('nav').style.boxShadow =
-    window.scrollY > 10 ? '0 4px 24px rgba(14,42,29,0.10)' : 'none';
+    window.scrollY > 10 ? '0 4px 24px rgba(0,0,0,0.10)' : 'none';
 });
