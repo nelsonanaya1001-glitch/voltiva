@@ -16,7 +16,7 @@
   --accent-pale:#f0f0f0;
   --ink:#0a0a0a;
   --muted:#666666;
-  --muted-dim:#8c8c8c;
+  --muted-dim:#5c5c5c;
   --border:rgba(0,0,0,0.13);
   --border-hi:rgba(0,0,0,0.42);
   --glow:rgba(0,0,0,0.12);
@@ -36,16 +36,6 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 
-/* faint paper grain */
-body::before{
-  content:'';
-  position:fixed;
-  inset:0;
-  z-index:1;
-  pointer-events:none;
-  opacity:.13;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
-}
 
 h1,h2,h3,h4,.n{
   font-family:'Fraunces','Georgia',serif;
@@ -60,6 +50,32 @@ img{max-width:100%;display:block}
 
 .wrap{max-width:1180px;margin:0 auto;padding:0 2rem}
 .tabular{font-variant-numeric:tabular-nums}
+
+
+/* ── FOCUS ─────────────────────────────────────────────── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.cat-card:focus-visible{
+  outline:2px solid var(--ink);
+  outline-offset:3px;
+  border-radius:6px;
+}
+.sdot:focus-visible,.thumb:focus-visible,.sc-arrow:focus-visible{
+  outline:2px solid #fff;outline-offset:2px;
+}
+
+/* Honour reduced motion everywhere, not just in the modal. */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+    scroll-behavior:auto!important;
+  }
+}
 
 /* ── BUTTONS ───────────────────────────────────────────── */
 .btn{
@@ -115,11 +131,12 @@ nav{
   font-size:.79rem;font-weight:600;
   letter-spacing:.11em;text-transform:uppercase;
   transition:color .25s;position:relative;
+  display:flex;align-items:center;min-height:44px;   /* WCAG target size */
 }
 .nav-links a:hover{color:var(--accent)}
 .nav-links a.active-tab:not(.nav-cta){color:var(--ink)}
 .nav-links a.active-tab:not(.nav-cta)::after{
-  content:'';position:absolute;bottom:-7px;left:0;right:0;height:2px;
+  content:'';position:absolute;bottom:9px;left:0;right:0;height:2px;
   background:linear-gradient(90deg,var(--accent-lt),var(--accent-deep));border-radius:2px;
 }
 .nav-cta{
@@ -491,7 +508,7 @@ nav{
 .contact-line svg{width:19px;height:19px;flex-shrink:0;margin-top:3px;stroke:var(--accent);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .contact-line .k{font-size:.67rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-dim)}
 .contact-line .v{font-size:.94rem;color:var(--ink)}
-.contact-line a{color:var(--accent);text-decoration:none}
+.contact-line a{color:var(--accent);text-decoration:none;display:inline-block;padding:.2rem 0}
 .contact-line a:hover{text-decoration:underline}
 
 form{
@@ -561,8 +578,9 @@ footer .brand-sub{color:rgba(255,255,255,.58)}
   font-family:'Manrope',sans-serif;font-size:.68rem;font-weight:800;
   letter-spacing:.16em;text-transform:uppercase;color:#ffffff;margin-bottom:1.1rem;
 }
-.footer-col ul{list-style:none;display:grid;gap:.65rem}
-.footer-col a{color:rgba(255,255,255,.76);text-decoration:none;font-size:.9rem;transition:color .25s;cursor:pointer}
+.footer-col ul{list-style:none;display:grid;gap:.35rem}
+.footer-col a{color:rgba(255,255,255,.76);text-decoration:none;font-size:.9rem;
+  transition:color .25s;cursor:pointer;display:inline-block;padding:.3rem 0}
 .footer-col a:hover{color:#fff}
 .footer-bottom{
   max-width:1180px;margin:0 auto;padding-top:1.8rem;
