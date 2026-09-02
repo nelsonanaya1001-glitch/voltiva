@@ -344,7 +344,9 @@ nav{
 .cat-visual{height:190px}
 .cat-body{padding:1.7rem 1.6rem 1.8rem;position:relative}
 .cat-icon{
-  position:absolute;top:-26px;left:1.6rem;
+  /* Sits above .visual::after (z-index 1), whose dark scrim otherwise paints
+     over the top half of the chip and greys out its ring. */
+  position:absolute;top:-26px;left:1.6rem;z-index:3;
   width:52px;height:52px;border-radius:14px;
   /* Darker than the artwork behind it, with a ring so the chip still reads
      where it overlaps the illustrated panel. */
