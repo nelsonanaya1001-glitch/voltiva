@@ -158,7 +158,7 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 });
 
 /* ── Forms → mailto ─────────────────────────────────────── */
-const INBOX = 'wholesale@voltiva.com';
+const INBOX = 'info@voltivawholesale.com';
 const val = id => (document.getElementById(id).value || '').trim();
 
 function sendMail(subject, body, successId) {
