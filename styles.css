@@ -25,10 +25,12 @@
 }
 
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+/* Form controls do not inherit font-family from the page by default. */
+button,input,select,textarea{font-family:inherit}
 html{scroll-behavior:smooth}
 
 body{
-  font-family:'Manrope',system-ui,-apple-system,sans-serif;
+  font-family:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
   background:var(--bg);
   color:var(--ink);
   overflow-x:hidden;
@@ -38,12 +40,12 @@ body{
 
 
 h1,h2,h3,h4,.n{
-  font-family:'Fraunces','Georgia',serif;
-  font-weight:600;
-  line-height:1.12;
-  letter-spacing:-0.015em;
+  font-family:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-weight:700;
+  line-height:1.1;
+  letter-spacing:-0.028em;
 }
-em{font-style:italic;color:var(--accent)}
+em{font-style:italic;font-weight:600;color:var(--accent)}
 
 a{color:inherit}
 img{max-width:100%;display:block}
@@ -86,7 +88,7 @@ textarea:focus-visible,
   letter-spacing:.07em;text-transform:uppercase;
   text-decoration:none;cursor:pointer;border:1px solid transparent;white-space:nowrap;
   transition:transform .22s,box-shadow .22s,background .22s,color .22s;
-  font-family:'Manrope',sans-serif;
+  font-family:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
 .btn-primary{
   background:linear-gradient(135deg,var(--accent-lt),var(--accent-deep));
@@ -120,7 +122,7 @@ nav{
 .logo-text{display:flex;flex-direction:column;gap:4px}
 .logo-word{height:14px;width:auto;display:block}
 .brand-sub{
-  display:block;font-family:'Manrope',sans-serif;
+  display:block;font-family:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
   font-size:.55rem;font-weight:700;letter-spacing:.24em;
   text-transform:uppercase;color:var(--muted-dim);
 }
@@ -224,7 +226,7 @@ nav{
   display:grid;grid-template-columns:1.05fr .95fr;gap:4rem;align-items:center;
 }
 .eyebrow{
-  font-family:'Manrope',sans-serif;
+  font-family:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
   font-size:.7rem;font-weight:800;letter-spacing:.28em;
   text-transform:uppercase;color:var(--accent);margin-bottom:1.1rem;
   display:flex;align-items:center;gap:.7rem;
@@ -271,7 +273,7 @@ nav{
 .showcase-overlay .thumbs{pointer-events:auto}
 
 .slide-copy{min-height:54px}
-.slide-cat{font-family:'Fraunces',serif;font-size:1.32rem;font-weight:600;color:#fff;margin-bottom:.3rem}
+.slide-cat{font-family:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:1.28rem;font-weight:700;letter-spacing:-.02em;color:#fff;margin-bottom:.3rem}
 .slide-meta{font-size:.72rem;color:rgba(255,255,255,.78);letter-spacing:.1em;text-transform:uppercase;font-weight:700}
 .slide-copy.enter .slide-cat{animation:scRise .6s cubic-bezier(.2,.75,.3,1) both}
 .slide-copy.enter .slide-meta{animation:scRise .6s .09s cubic-bezier(.2,.75,.3,1) both}
@@ -446,7 +448,7 @@ nav{
 }
 .step:hover{border-color:var(--border-hi);transform:translateY(-4px)}
 .step-n{
-  font-family:'Fraunces',serif;font-size:2.6rem;font-weight:600;
+  font-family:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:2.4rem;font-weight:800;
   color:rgba(0,0,0,.22);line-height:1;margin-bottom:.7rem;
 }
 .step h3{font-size:1.08rem;margin-bottom:.55rem}
@@ -487,7 +489,7 @@ nav{
   width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;
   padding:1.25rem 1.5rem;background:none;border:none;cursor:pointer;
   color:var(--ink);font-size:1rem;font-weight:600;text-align:left;
-  font-family:'Manrope',sans-serif;
+  font-family:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
 .faq-q .icon{color:var(--accent);font-size:1.35rem;line-height:1;transition:transform .3s;flex-shrink:0}
 .faq-item[data-open="true"] .icon{transform:rotate(45deg)}
@@ -526,7 +528,7 @@ form{
 .field input,.field select,.field textarea{
   width:100%;padding:.85rem 1rem;
   background:var(--field);border:1px solid rgba(0,0,0,.14);border-radius:9px;
-  color:var(--ink);font-size:.93rem;font-family:'Manrope',sans-serif;
+  color:var(--ink);font-size:.93rem;font-family:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
   transition:border-color .25s,box-shadow .25s;
 }
 .field input::placeholder,.field textarea::placeholder{color:#9a9a9a}
@@ -577,7 +579,7 @@ footer .brand-sub{color:rgba(255,255,255,.58)}
 .footer-brand p{color:rgba(255,255,255,.72);font-size:.9rem;margin:1rem 0 1.2rem;max-width:330px}
 .footer-brand .nav-logo{margin-bottom:0}
 .footer-col h4{
-  font-family:'Manrope',sans-serif;font-size:.68rem;font-weight:800;
+  font-family:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:.68rem;font-weight:800;
   letter-spacing:.16em;text-transform:uppercase;color:#ffffff;margin-bottom:1.1rem;
 }
 .footer-col ul{list-style:none;display:grid;gap:.35rem}
